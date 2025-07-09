@@ -7,24 +7,26 @@
 }
 
 .tabItem {
-  background: #e0d4eb;
+  background: #c6e0eb; /* celeste muy suave */
   border: none;
   border-radius: 12px;
   padding: 0.5rem 1.25rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #444;
+  color: #1f4f5f; /* celeste oscuro */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tabItem:hover {
-  background: #d6c6e6;
+  background: #99c7db; /* celeste medio */
 }
 
 .tabItemActive {
-  background: #a8e063;
-  color: #444;
+  background: #83c5be; /* celeste principal */
+  color: #014d56; /* celeste más oscuro */
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(131, 197, 190, 0.5);
 }
 
 .questionList {
@@ -38,12 +40,16 @@
 }
 
 .questionItem {
-  background: linear-gradient(135deg, #f1e4f9 0%, #e7d3f3 100%);
-  color: #444;
+  background: linear-gradient(
+    135deg,
+    #d9f0f6 0%,
+    #b9dee8 100%
+  ); /* gradiente celeste claro */
+  color: #1f4f5f; /* celeste oscuro */
   padding: 1rem 1.25rem;
   border-radius: 0.75rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,10 +59,12 @@
   position: relative;
   border: none;
   text-align: left;
+  box-shadow: 0 2px 6px rgba(31, 79, 95, 0.1);
 }
 
 .questionItem:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(131, 197, 190, 0.3);
 }
 
 .questionHeader {
@@ -69,36 +77,37 @@
 .questionText {
   font-weight: 600;
   font-size: 1.05rem;
-  color: #444;
+  color: #1f4f5f;
   flex: 1;
 }
 
 .answerText {
   font-weight: 400;
   font-size: 0.98rem;
-  color: #666;
+  color: #4a8ea1; /* celeste medio */
   line-height: 1.5;
   flex: 1;
 }
 
 .chevron {
   transition: transform 0.3s ease;
-  color: #a8e063;
+  color: #83c5be;
   margin-left: 0.5rem;
+  flex-shrink: 0;
 }
 
 .chevronOpen {
   transform: rotate(180deg);
 }
 
-/* Eliminar estilos innecesarios */
+/* Ocultar elementos innecesarios para esta implementación */
 .answerWrapper,
 .answerWrapper.open,
 .answer {
   display: none;
 }
 
-/* Mobile */
+/* Responsive para móvil */
 @media (max-width: 768px) {
   .questionList {
     grid-template-columns: 1fr;
@@ -113,11 +122,9 @@
     justify-content: center;
   }
 
+  /* Ocultar scrollbar en mobile */
   .questionList::-webkit-scrollbar {
     display: none;
-  }
-
-  .questionList {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }

@@ -1,0 +1,144 @@
+/* Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  transition: background-color 0.3s ease, height 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.scrolled {
+  background: #83c5be; /* celeste principal */
+  height: 50px;
+  box-shadow: 0 2px 12px rgba(131, 197, 190, 0.6);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #014d56;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #006d77;
+}
+
+.logoIcon {
+  color: #006d77;
+  transition: color 0.3s ease;
+}
+
+.logo:hover .logoIcon {
+  color: #004d51;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #014d56;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  background-color: #c6e0eb;
+  color: #004d51;
+}
+
+.activeLink {
+  color: #004d51;
+  font-weight: 700;
+}
+
+.link1 {
+  color: #1f4f5f;
+}
+
+.link2 {
+  color: #3a6f7b;
+}
+
+.link3 {
+  color: #5a8b9a;
+}
+
+.ctaButton {
+  background-color: #83c5be;
+  color: #003d42;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.ctaButton:hover {
+  background-color: #6bb3aa;
+  color: #001f1d;
+}
+
+.menuButton {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #014d56;
+  transition: color 0.3s ease;
+}
+
+.menuButton:hover {
+  color: #006d77;
+}
+
+/* Responsive: mobile menu */
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .ctaButton {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+}

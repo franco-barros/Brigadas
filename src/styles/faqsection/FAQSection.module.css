@@ -8,15 +8,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, #b497bd 0%, #c8a2c8 50%, #e0bbe4 100%);
-  border-radius: 9999px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  gap: 0.4rem;
+  background-color: #83c5be;
+  color: #003d42;
   font-weight: 600;
-  font-family: var(--font-badge);
-  color: black;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 6px rgba(131, 197, 190, 0.6);
+  transition: background-color 0.3s ease;
+  cursor: default;
   margin: 0 auto 1rem;
+  user-select: none;
+}
+
+.badge:hover {
+  background-color: #a3d5cf;
 }
 
 .title {
@@ -26,11 +34,11 @@
 }
 
 .title span:first-child {
-  color: #000;
+  color: #003d42; /* celeste oscuro */
 }
 
 .title span:last-child {
-  color: #a8e063;
+  color: #2ec4b6; /* celeste medio */
 }
 
 .description {

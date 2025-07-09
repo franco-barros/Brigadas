@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaInstagram, FaPhoneAlt, FaEnvelope, FaLeaf } from "react-icons/fa";
+import { FaInstagram, FaPhoneAlt, FaEnvelope, FaUsers } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Footer.module.css";
 
@@ -27,12 +27,13 @@ const Footer = () => {
         {/* Presentación */}
         <div className={styles.section}>
           <h3 className={styles.title}>
-            <FaLeaf className={styles.iconLeaf} />
-            Lic. Iván Waisman | Psicólogo Clínico
+            <FaUsers className={styles.iconLeaf} />
+            Brigada Educativa Comunitaria
           </h3>
           <p className={styles.description}>
-            Psicólogo clínico especializado en bienestar mental y crecimiento
-            personal.
+            Somos una organización comunitaria que promueve la educación
+            popular, la inclusión y el desarrollo de los barrios desde la
+            solidaridad.
           </p>
         </div>
 
@@ -44,18 +45,18 @@ const Footer = () => {
               <ul className={styles.list}>
                 <li>
                   <a
-                    href="#aboutme"
-                    onClick={(e) => handleInternalLinkClick(e, "aboutme")}
+                    href="#aboutus"
+                    onClick={(e) => handleInternalLinkClick(e, "aboutus")}
                   >
-                    Sobre Mí
+                    Quiénes Somos
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#blog"
-                    onClick={(e) => handleInternalLinkClick(e, "blog")}
+                    href="#work"
+                    onClick={(e) => handleInternalLinkClick(e, "work")}
                   >
-                    Blog y recursos
+                    Nuestro Trabajo
                   </a>
                 </li>
                 <li>
@@ -72,19 +73,19 @@ const Footer = () => {
             <div className={styles.section}>
               <h4 className={styles.subtitle}>Contacto</h4>
               <p className={styles.contact}>
-                <FaPhoneAlt /> +31649393678
+                <FaPhoneAlt /> +54 9 264 123-4567
               </p>
               <p className={styles.contact}>
-                <FaEnvelope /> psi.ivanwaisman@gmail.com
+                <FaEnvelope /> brigadaeducativa@gmail.com
               </p>
               <a
-                href="https://www.instagram.com/creandocaminos__"
+                href="https://www.instagram.com/brigadaeducativa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.contact}
                 aria-label="Instagram"
               >
-                <FaInstagram /> @creandocaminos__
+                <FaInstagram /> @brigadaeducativa
               </a>
             </div>
           </>
@@ -94,7 +95,7 @@ const Footer = () => {
       {/* Pie común */}
       <div className={styles.bottomBar}>
         <p className={styles.copy}>
-          © 2024 Lic. Iván Waisman Todos los derechos reservados.
+          © 2024 Brigada Educativa Comunitaria. Todos los derechos reservados.
         </p>
       </div>
     </footer>

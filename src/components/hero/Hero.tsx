@@ -1,74 +1,53 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { UserCheck } from "lucide-react";
 import styles from "../../styles/Hero.module.css";
 
 const Hero: React.FC = () => {
+  // Función para hacer scroll suave sin cambiar la URL
+  const handleScroll =
+    (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
-    <section id="hero" className={styles.hero}>
-      <motion.div
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <div className={styles.container}>
-          <div className={styles.textArea}>
-            <div className={styles.badge}>
-              <UserCheck size={18} />
-              <span>Psicólogo Clínico Certificado</span>
-            </div>
-
-            <h1 className={styles.title}>
-              <span className={styles.highlightPrimary}>
-                Transformando vidas a través de la
-              </span>{" "}
-              <span className={styles.highlightSecondary}>
-                psicología especializada
-              </span>
-            </h1>
-
-            {/* Imagen solo en mobile */}
-            <div className={`${styles.imageContainer} ${styles.mobileOnly}`}>
-              <Image
-                src="/images/ivanpsicology1.png"
-                alt="Lic. Ivan Waisman"
-                width={400}
-                height={200}
-                className={styles.image}
-              />
-            </div>
-
-            <p className={styles.description}>
-              Acompañamiento profesional para superar desafíos emocionales,
-              mejorar relaciones y alcanzar tu mejor versión. Terapia presencial
-              y online, siempre intentando mejorar.
-            </p>
-
-            <p className={styles.signature}>Lic. Ivan Waisman – Psicólogo</p>
+    <section className={styles.hero}>
+      <div className={styles.overlay}>
+        <motion.div
+          className={styles.card}
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className={styles.title}>Brigada Educativa</h1>
+          <p className={styles.description}>
+            Transformando comunidades a través de la educación y el compromiso
+            social. Trabajamos en barrios populares llevando esperanza y
+            oportunidades de aprendizaje.
+          </p>
+          <div className={styles.buttons}>
+            <a
+              href="#aboutus"
+              className={styles.button}
+              onClick={handleScroll("aboutus")}
+            >
+              Conocé Nuestro Trabajo
+            </a>
+            <a
+              href="#contact"
+              className={styles.buttonSecondary}
+              onClick={handleScroll("contact")}
+            >
+              Contactanos
+            </a>
           </div>
-
-          {/* Imagen solo en desktop */}
-          <div className={`${styles.imageContainer} ${styles.desktopOnly}`}>
-            <Image
-              src="/images/ivanpsicology1.png"
-              alt="Lic. Ivan Waisman"
-              width={400}
-              height={200}
-              className={styles.image}
-            />
-          </div>
-        </div>
-
-        <div className={styles.buttonWrapper}>
-          <Link href="/testimonials" className={styles.testimonialsButton}>
-            Ver todos los testimonios
-          </Link>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 };

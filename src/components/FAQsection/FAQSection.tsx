@@ -16,12 +16,13 @@ const FAQSection: React.FC = () => {
         </div>
 
         <h2 className={styles.title}>
-          <span>Resuelve tus</span> <span>Dudas</span>
+          <span>Resuelve tus</span> <span>Dudas sobre la Brigada</span>
         </h2>
 
         <p className={styles.description}>
-          Encuentra respuestas a las preguntas más comunes sobre terapia
-          psicológica
+          Aquí respondemos las preguntas más comunes sobre cómo funciona la
+          Brigada Educativa, cómo sumarte y el impacto que generamos en la
+          comunidad.
         </p>
 
         <FAQTabsCarousel />

@@ -3,136 +3,110 @@
 import React from "react";
 import styles from "../../styles/Contact.module.css";
 import { Phone, Mic } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { FadeInOnScroll } from "../shared/fadeInonscroll";
 
 const Contact: React.FC = () => {
   return (
     <section className={styles.contact}>
-      <h2 className={styles.title}>¡Sumate a las Brigadas Educativas!</h2>
+      <FadeInOnScroll>
+        <h2 className={styles.title}>
+          <span>¡Sumate a las </span> <span>Brigadas Educativas!</span>
+        </h2>
+      </FadeInOnScroll>
 
-      <div className={styles.instagramCardsContainer}>
-        <div className={styles.instagramCard}>
-          <div className={styles.instagramEmbed}>
-            <iframe
-              src="https://www.instagram.com/p/DIUogHZJeEQ/embed"
-              allow="encrypted-media"
-              title="Instagram Embed 1"
-            ></iframe>
-          </div>
+      <FadeInOnScroll delay={0.1}>
+        <div className={styles.instagramCardsContainer}>
+          {[
+            "https://www.instagram.com/p/DIUogHZJeEQ/embed",
+            "https://www.instagram.com/p/DKSxOwwJqkH/embed",
+            "https://www.instagram.com/p/DIw3vfOJgTz/embed",
+          ].map((url, index) => (
+            <div key={index} className={styles.instagramCard}>
+              <div className={styles.instagramEmbed}>
+                <iframe
+                  src={url}
+                  allow="encrypted-media"
+                  title={`Instagram Embed ${index + 1}`}
+                />
+              </div>
+            </div>
+          ))}
         </div>
-        <div className={styles.instagramCard}>
-          <div className={styles.instagramEmbed}>
-            <iframe
-              src="https://www.instagram.com/p/DKSxOwwJqkH/embed"
-              allow="encrypted-media"
-              title="Instagram Embed 2"
-            ></iframe>
-          </div>
-        </div>
-        <div className={styles.instagramCard}>
-          <div className={styles.instagramEmbed}>
-            <iframe
-              src="https://www.instagram.com/p/DIw3vfOJgTz/embed"
-              allow="encrypted-media"
-              title="Instagram Embed 3"
-            ></iframe>
-          </div>
-        </div>
-      </div>
+      </FadeInOnScroll>
 
-      {/* Botón Instagram */}
-      <div className={styles.instagramButtonContainer}>
-        <Link
-          href="https://www.instagram.com/brigadaseducativas.sj"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.instagramButton}
-        >
-          Seguinos en @brigadaseducativas.sj
-        </Link>
-      </div>
-
-      <div className={styles.contactGrid}>
-        {/* Alejo */}
-        <div className={styles.personCard}>
-          <Image
-            src="/images/persona.png"
-            alt="Alejo García"
-            width={120}
-            height={120}
-            className={styles.profileImage}
-          />
-          <div className={styles.item}>
-            <Phone className={styles.icon} />
-            <p>
-              Alejo García:{" "}
-              <a href="tel:2644771159" className={styles.phone}>
-                264 477 1159
-              </a>
-            </p>
-          </div>
-        </div>
-
-        {/* Mateo */}
-        <div className={styles.personCard}>
-          <Image
-            src="/images/persona.png"
-            alt="Mateo Molina"
-            width={120}
-            height={120}
-            className={styles.profileImage}
-          />
-          <div className={styles.item}>
-            <Phone className={styles.icon} />
-            <p>
-              Mateo Molina:{" "}
-              <a href="tel:2646235026" className={styles.phone}>
-                264 623 5026
-              </a>
-            </p>
-          </div>
-        </div>
-
-        {/* Julieta */}
-        <div className={styles.personCard}>
-          <Image
-            src="/images/persona.png"
-            alt="Julieta Herrera"
-            width={120}
-            height={120}
-            className={styles.profileImage}
-          />
-          <div className={styles.item}>
-            <Phone className={styles.icon} />
-            <p>
-              Julieta Herrera:{" "}
-              <a href="tel:2645856333" className={styles.phone}>
-                264 585 6333
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Podcast */}
-      <div className={styles.card}>
-        <div className={styles.item}>
-          <Mic className={styles.icon} />
-          <p>
-            Escuchá nuestro podcast y conocé las voces de los protagonistas.
-            ¡Hacé click abajo! 👇
-          </p>
+      <FadeInOnScroll delay={0.2}>
+        <div className={styles.instagramButtonContainer}>
           <Link
-            href="https://open.spotify.com/show/tu-podcast-link"
+            href="https://www.instagram.com/brigadaseducativas.sj"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.podcastLink}
+            className={styles.instagramButton}
           >
-            Ir al Podcast
+            <FaInstagram className={styles.instagramIcon} />
+            Seguinos en @brigadaseducativas.sj
           </Link>
         </div>
-      </div>
+      </FadeInOnScroll>
+
+      <FadeInOnScroll delay={0.3}>
+        <div className={styles.contactGrid}>
+          {[
+            { name: "Alejo García", phone: "2644771159" },
+            { name: "Mateo Molina", phone: "2646235026" },
+            { name: "Julieta Herrera", phone: "2645856333" },
+          ].map((person, index) => (
+            <div key={index} className={styles.personCard}>
+              <Image
+                src="/images/persona.png"
+                alt={person.name}
+                width={120}
+                height={120}
+                className={styles.profileImage}
+              />
+              <div className={styles.item}>
+                <Phone className={styles.icon} />
+                <p>
+                  {person.name}:{" "}
+                  <a href={`tel:${person.phone}`} className={styles.phone}>
+                    {person.phone}
+                  </a>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </FadeInOnScroll>
+
+      <FadeInOnScroll delay={0.4}>
+        <div className={styles.podcastSection}>
+          <div className={styles.podcastCard}>
+            {/* Mic posicionado como watermark */}
+            <Mic
+              className={styles.podcastCardIcon}
+              aria-hidden="true"
+              size={100} // tamaño en px, ajusta como quieras
+            />
+
+            {/* Contenido del podcast */}
+            <div className={styles.podcastCardContent}>
+              <p className={styles.podcastCardText}>
+                Escuchá nuestro podcast y conocé las voces de los protagonistas.
+              </p>
+              <Link
+                href="https://open.spotify.com/show/tu-podcast-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.podcastCardButton}
+              >
+                Ir al Podcast
+              </Link>
+            </div>
+          </div>
+        </div>
+      </FadeInOnScroll>
     </section>
   );
 };

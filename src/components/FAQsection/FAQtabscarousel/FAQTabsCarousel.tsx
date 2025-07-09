@@ -10,62 +10,74 @@ const faqItems = [
     category: "General",
     questions: [
       {
-        question: "¿Cuánto dura una sesión de terapia?",
-        answer: "Cada sesión dura aproximadamente 50 minutos.",
+        question: "¿Qué es la Brigada Educativa?",
+        answer:
+          "La Brigada Educativa es un grupo de voluntarios que trabajan en barrios populares para brindar apoyo educativo y social.",
       },
       {
-        question: "¿Con qué frecuencia debo asistir a terapia?",
-        answer: "Lo ideal es una vez por semana, según tus necesidades.",
+        question: "¿Quiénes pueden sumarse a la brigada?",
+        answer:
+          "Cualquier persona comprometida con la educación y el desarrollo social puede unirse, sin importar su formación previa.",
       },
       {
-        question: "¿Qué debo esperar en la primera sesión?",
-        answer: "Exploramos tus motivos y objetivos para definir el enfoque.",
+        question: "¿Cuáles son las principales actividades de la brigada?",
+        answer:
+          "Realizamos talleres, clases de apoyo, campañas de concientización y actividades recreativas para niños y jóvenes.",
       },
       {
-        question: "¿Trabajas con adolescentes?",
-        answer: "Sí, a partir de los 13 años con un enfoque adaptado.",
-      },
-    ],
-  },
-  {
-    category: "Modalidad Online",
-    questions: [
-      {
-        question: "¿La terapia online es tan buena como la presencial?",
-        answer: "Sí, su efectividad está respaldada por estudios.",
-      },
-      {
-        question: "¿Cuánto tiempo toma ver resultados en terapia?",
-        answer: "Depende de cada persona, a veces en pocas semanas.",
-      },
-      {
-        question: "¿Qué dispositivos necesito para la terapia online?",
-        answer: "Un celular, tablet o computadora con internet estable.",
-      },
-      {
-        question: "¿Es segura la terapia online?",
-        answer: "Sí, se usa tecnología segura y confidencial.",
+        question: "¿Dónde opera la Brigada Educativa?",
+        answer:
+          "Trabajamos principalmente en barrios vulnerables de nuestra región, llevando oportunidades educativas y apoyo social.",
       },
     ],
   },
   {
-    category: "Otros",
+    category: "Participación",
     questions: [
       {
-        question: "¿Qué métodos terapéuticos utilizas?",
-        answer: "Uso un enfoque integrativo adaptado a cada persona.",
+        question: "¿Cómo puedo ser voluntario?",
+        answer:
+          "Podés contactarnos a través de la sección de contacto y te brindaremos toda la información para sumarte.",
       },
       {
-        question: "¿Manejas casos de emergencia?",
-        answer: "No, en crisis se recomienda acudir a emergencias.",
+        question: "¿Se necesita alguna capacitación previa?",
+        answer:
+          "Ofrecemos capacitaciones para que todos los voluntarios estén preparados para trabajar con la comunidad.",
       },
       {
-        question: "¿Atendés a personas del exterior?",
-        answer: "Sí, realizo sesiones online desde cualquier país.",
+        question: "¿Cuánto tiempo debo dedicar para participar?",
+        answer:
+          "La participación es flexible, podés colaborar algunas horas a la semana o en actividades puntuales.",
       },
       {
-        question: "¿Cómo puedo reservar una sesión?",
-        answer: "Podés agendar desde la web o por WhatsApp.",
+        question: "¿Puedo aportar con donaciones en lugar de tiempo?",
+        answer:
+          "Sí, aceptamos donaciones para materiales educativos y organización de eventos comunitarios.",
+      },
+    ],
+  },
+  {
+    category: "Impacto",
+    questions: [
+      {
+        question: "¿Qué resultados ha logrado la brigada?",
+        answer:
+          "Hemos apoyado a cientos de niños y jóvenes a mejorar su rendimiento escolar y fomentar su inclusión social.",
+      },
+      {
+        question: "¿Cómo miden el impacto social?",
+        answer:
+          "Realizamos evaluaciones periódicas y recibimos feedback de las comunidades para mejorar nuestras acciones.",
+      },
+      {
+        question: "¿Puedo compartir mi experiencia como voluntario?",
+        answer:
+          "Claro, valoramos mucho que los voluntarios compartan sus testimonios para inspirar a otros.",
+      },
+      {
+        question: "¿Cómo puedo apoyar si no vivo en la región?",
+        answer:
+          "Podés colaborar en campañas online, difusión o donaciones desde cualquier lugar.",
       },
     ],
   },

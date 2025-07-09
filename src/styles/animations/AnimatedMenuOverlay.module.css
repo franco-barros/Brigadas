@@ -1,0 +1,76 @@
+/* AnimatedMenuOverlay.module.css */
+
+.menuOverlayContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.animatedMenu {
+  background-color: #006d77; /* celeste marino */
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #83c5be;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: #aadfd8;
+}
+
+.menuItemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.menuItem {
+  background-color: transparent;
+  border: 2px solid #83c5be;
+  color: #83c5be;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.menuItem:hover {
+  background-color: #83c5be;
+  color: #003d42;
+}
+
+.activeItem {
+  background-color: #aadfd8;
+  color: #003d42;
+  border-color: #aadfd8;
+}
