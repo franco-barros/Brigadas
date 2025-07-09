@@ -1,0 +1,128 @@
+.aboutSection {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+
+.badgeWrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  background: #e8f5e9;
+  color: #4a7c59;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imageWrapper {
+  text-align: center;
+}
+
+.image {
+  border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+}
+
+.textWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.titleWrapper {
+  margin-bottom: 1rem;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  color: #2d4739;
+  line-height: 1.3;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.subTitle {
+  font-size: 1.25rem;
+  color: #4a7c59;
+  margin-bottom: 1rem;
+}
+
+.credentialsCard {
+  background: white;
+  border-left: 4px solid #a8cf96;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.iconCircle {
+  background: #e2efd8;
+  padding: 0.4rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.featureText {
+  color: #333;
+}
+
+.focusCard {
+  background: #f1f8e9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.focusTitle {
+  color: #4a7c59;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.focusText {
+  color: #444;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #8da65d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #749c47;
+}

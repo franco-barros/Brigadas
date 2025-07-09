@@ -1,0 +1,80 @@
+.footer {
+  background: #1d1f20;
+  color: #f0f0f0;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a8cf96;
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #e2e2e2;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.list a {
+  color: #bde0b0;
+  text-decoration: none;
+}
+
+.list a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.iconLeaf {
+  color: #8da65d;
+}
+
+.bottomBar {
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: #999;
+}

@@ -1,0 +1,91 @@
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.textArea {
+  max-width: 800px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: #cbe6b0;
+  color: #2e5d34;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.highlightPrimary {
+  color: #466c3a;
+}
+
+.highlightSecondary {
+  color: #8da65d;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #555;
+}
+
+.signature {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #333;
+}
+
+.imageContainer {
+  margin: 2rem 0;
+}
+
+.mobileOnly {
+  display: block;
+}
+
+.desktopOnly {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mobileOnly {
+    display: none;
+  }
+
+  .desktopOnly {
+    display: block;
+  }
+
+  .textArea {
+    text-align: left;
+  }
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
