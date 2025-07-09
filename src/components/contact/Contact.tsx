@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
             <Mic
               className={styles.podcastCardIcon}
               aria-hidden="true"
-              size={100} // tamaño en px, ajusta como quieras
+              size={100}
             />
 
             {/* Contenido del podcast */}
@@ -105,6 +105,29 @@ const Contact: React.FC = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </FadeInOnScroll>
+
+      {/* NUEVO BLOQUE DE VOLUNTARIOS */}
+      {/* NUEVO BLOQUE DE VOLUNTARIOS */}
+      <FadeInOnScroll delay={0.5}>
+        <div className={styles.volunteerSection}>
+          <h3 className={styles.volunteerTitle}>
+            ¿Querés ser parte de la Brigada?
+          </h3>
+          <p className={styles.volunteerText}>
+            Siempre estamos buscando personas comprometidas que quieran sumarse
+            a nuestro trabajo. No importa tu experiencia previa, lo importante
+            es tener ganas de ayudar y aprender.
+          </p>
+          <a
+            href="https://wa.me/5492641234567?text=Hola,%20quiero%20sumarme%20a%20la%20Brigada%20Educativa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.volunteerButton}
+          >
+            Quiero Ser Voluntario/a
+          </a>
         </div>
       </FadeInOnScroll>
     </section>
