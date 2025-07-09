@@ -1,0 +1,37 @@
+.carousel {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f0fdfa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.card svg {
+  color: #059669;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #065f46;
+}
+
+.text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}

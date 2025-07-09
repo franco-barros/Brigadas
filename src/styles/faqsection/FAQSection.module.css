@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  background-color: #83c5be;
+  background: linear-gradient(135deg, #2ec4b6, #a3d5cf);
   color: #003d42;
   font-weight: 600;
   padding: 0.3rem 0.8rem;
@@ -24,7 +24,7 @@
 }
 
 .badge:hover {
-  background-color: #a3d5cf;
+  background: linear-gradient(135deg, #a3d5cf, #2ec4b6);
 }
 
 .title {

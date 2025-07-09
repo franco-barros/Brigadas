@@ -13,21 +13,21 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  background-color: #83c5be;
+  background: linear-gradient(135deg, #2ec4b6, #a3d5cf); /* fuerte → claro */
   color: #003d42;
   font-weight: 600;
-  padding: 0.3rem 0.8rem; /* Menos padding */
-  border-radius: 1.5rem; /* Más redondeado */
-  font-size: 0.9rem; /* Tamaño más pequeño */
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.5rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
-  box-shadow: 0 2px 6px rgba(131, 197, 190, 0.6); /* Sutil sombra para dar profundidad */
-  gap: 0.4rem; /* Espacio entre icono y texto */
-  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(131, 197, 190, 0.6);
+  gap: 0.4rem;
+  transition: background 0.3s ease;
   cursor: default;
 }
 
 .badge:hover {
-  background-color: #a3d5cf;
+  background: linear-gradient(135deg, #a3d5cf, #2ec4b6); /* claro → fuerte */
 }
 
 .sectionTitle {

@@ -13,7 +13,7 @@ const AboutUs: React.FC = () => {
         {/* Badge arriba del título */}
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
-            <Users size={20} style={{ marginRight: "0.5rem" }} />
+            <Users size={16} style={{ marginRight: "0.5rem" }} />
             Brigada Educativa
           </span>
         </div>

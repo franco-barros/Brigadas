@@ -1,0 +1,39 @@
+.carouselContainer {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* centra las cards */
+  max-width: 320px; /* ajuste según tamaño de .carouselSlide */
+  margin: 0 auto;
+}
+
+.carouselSlide {
+  scroll-snap-align: start;
+  flex: 0 0 80%;
+  max-width: 300px;
+}
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carouselIndicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselIndicatorActive {
+  background-color: #2ec4b6;
+}

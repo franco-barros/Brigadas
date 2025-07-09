@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import styles from "../../styles/HowItStarted.module.css";
+import styles from "../../styles/howitstarted/HowItStarted.module.css";
 import { Lightbulb, Footprints, TrendingUp, Users } from "lucide-react";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
+import { ImageCarousel } from "./imagecarousel";
 
 const HowItStarted: React.FC = () => {
   return (
@@ -18,44 +18,16 @@ const HowItStarted: React.FC = () => {
         </div>
 
         <div className={styles.wrapper}>
-          {/* Collage de imágenes */}
-          <div className={styles.gallery}>
-            <div className={styles.topRow}>
-              <div className={styles.imageItem}>
-                <Image
-                  src="/images/personas.png"
-                  alt="Voluntariado 1"
-                  width={300}
-                  height={200}
-                  className={styles.image}
-                />
-              </div>
-              <div className={styles.imageItem}>
-                <Image
-                  src="/images/personas.png"
-                  alt="Voluntariado 2"
-                  width={300}
-                  height={200}
-                  className={styles.image}
-                />
-              </div>
-            </div>
-            <div className={styles.bottomRow}>
-              <Image
-                src="/images/personas.png"
-                alt="Actividad educativa"
-                width={600}
-                height={300}
-                className={styles.image}
-              />
-            </div>
-          </div>
-
           {/* Contenido textual */}
           <div className={styles.content}>
             <h2 className={styles.mainTitle}>
               <span>Cómo Inició</span> <span>el Proyecto</span>
             </h2>
+
+            {/* Carrusel de imágenes aquí */}
+            <div className={styles.gallery}>
+              <ImageCarousel />
+            </div>
 
             <p className={styles.intro}>
               Todo comenzó con una simple idea: llevar educación y esperanza a
