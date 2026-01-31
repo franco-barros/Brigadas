@@ -13,12 +13,12 @@ const Navbar: React.FC = () => {
   const navLinks = useMemo(
     () => [
       { id: "hero", label: "Inicio" },
-      { id: "aboutus", label: "Nosotros" },
-      { id: "work", label: "Nuestro Trabajo" },
-      { id: "faq", label: "Preguntas" },
+      { id: "aboutus", label: "Quienes somos" },
+      { id: "work", label: "Que hacemos" },
+      { id: "faq", label: "Como participar" },
       { id: "contact", label: "Contacto" },
     ],
-    []
+    [],
   );
 
   const scrollToSection = (id: string) => {
