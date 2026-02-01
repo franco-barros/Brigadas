@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
-import { Users } from "lucide-react";
+import Image from "next/image";
 import AnimatedMenuOverlay from "../animations/animatedmenuoverlay";
 import styles from "../../styles/Navbar.module.css";
 
@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
   const navLinks = useMemo(
     () => [
       { id: "hero", label: "Inicio" },
-      { id: "aboutus", label: "Quienes somos" },
-      { id: "work", label: "Que hacemos" },
-      { id: "faq", label: "Como participar" },
+      { id: "aboutus", label: "Quiénes somos" },
+      { id: "work", label: "Qué hacemos" },
+      { id: "faq", label: "Cómo participar" },
       { id: "contact", label: "Contacto" },
     ],
     [],
@@ -55,11 +55,23 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        <button className={styles.logo} onClick={() => scrollToSection("hero")}>
-          <Users size={32} className={styles.logoIcon} />
-          <span className={styles.logoText}>Brigada Educativa</span>
+        {/* LOGO */}
+        <button
+          className={styles.logo}
+          onClick={() => scrollToSection("hero")}
+          aria-label="Ir al inicio"
+        >
+          <Image
+            src="/logos/BrigadasCelesteNegro.png"
+            alt="Brigada Educativa"
+            width={140}
+            height={40}
+            className={styles.logoImage}
+            priority
+          />
         </button>
 
+        {/* LINKS DESKTOP */}
         <div className={styles.links}>
           {navLinks.map((link, index) => (
             <button
@@ -76,10 +88,11 @@ const Navbar: React.FC = () => {
           ))}
         </div>
 
+        {/* BOTÓN MENÚ MOBILE */}
         <button
           className={styles.menuButton}
           onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle menu"
+          aria-label="Abrir menú"
         >
           ☰
         </button>

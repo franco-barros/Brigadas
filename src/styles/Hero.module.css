@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url("/images/Chicos5.png");
+  background-image: url("/images/Familia2.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -22,20 +22,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* 👈 clave */
-  gap: 1.5rem; /* 👈 controla distancia logo-card */
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 
-/* LOGO centrado */
+/* LOGO */
 .logo {
   max-width: 240px;
   width: 100%;
-  margin-top: 3rem; /* baja un poco el logo */
+  margin-top: 3rem;
 }
 
-/* CARD más abajo y más grande */
+/* CARD */
 .card {
-  background-color: rgba(255, 255, 255, 0.08); /* 👈 casi transparente */
+  background-color: rgba(0, 159, 227, 0.65);
   padding: 3.5rem 2.5rem;
   border-radius: 16px;
   max-width: 700px;
@@ -71,7 +71,7 @@
 .button {
   background-color: #fdd220;
   color: #003b5c;
-  padding: 0.85rem 1.75rem; /* un poco más grande */
+  padding: 0.85rem 1.75rem;
   border-radius: 8px;
   border: none;
   font-weight: bold;
@@ -103,25 +103,49 @@
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* 📱 Mobile */
+/* 📱 MOBILE */
 @media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .overlay {
+    padding: 1.5rem;
+  }
+
+  .content {
+    justify-content: flex-start; /* 👈 NO centramos vertical */
+    padding-top: 2rem; /* 👈 espacio real para el logo */
+    gap: 1rem;
+  }
+
   .logo {
-    max-width: 180px;
-    margin-top: 2rem;
+    max-width: 200px;
+    margin-top: 1;
+    margin-bottom: 1.5rem; /* 👈 aire propio del logo */
   }
 
   .card {
-    padding: 2.5rem 1.75rem;
-    max-width: 90%;
-    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+    max-width: 92%;
+    margin-bottom: 0;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .buttons {
+    gap: 0.75rem;
   }
 
   .button,
   .buttonSecondary {
     width: 100%;
+    padding: 0.9rem;
   }
 }

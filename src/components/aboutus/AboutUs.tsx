@@ -67,7 +67,7 @@ const AboutUs: React.FC = () => {
 
           <div className={styles.imageWrapper}>
             <Image
-              src="/images/personas.png"
+              src="/images/Chicos5.png"
               alt="Voluntarios Brigada Educativa"
               width={500}
               height={400}
