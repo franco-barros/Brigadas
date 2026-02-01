@@ -17,6 +17,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
+      id="hero"
       className={styles.hero}
       aria-label="Presentación Brigadas Educativas"
     >

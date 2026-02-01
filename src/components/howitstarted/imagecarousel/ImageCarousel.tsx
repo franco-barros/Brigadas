@@ -5,15 +5,15 @@ import Image from "next/image";
 import styles from "../../../styles/howitstarted/ImageCarousel.module.css";
 
 const IMAGES = [
-  "/images/personas2.png",
-  "/images/personas2.png",
-  "/images/personas2.png",
-  "/images/personas3.png",
-  "/images/personas3.png",
-  "/images/personas3.png",
-  "/images/persona.png",
-  "/images/persona.png",
-  "/images/persona.png",
+  "/images/Chicos.png",
+  "/images/Chicos1.png",
+  "/images/Chicos2.png",
+  "/images/Chicos3.png",
+  "/images/Chicos4.png",
+  "/images/Familia.png",
+  "/images/Familia1.png",
+  "/images/Familia4.png",
+  "/images/Familia3.png",
 ];
 
 const IMAGES_PER_SLIDE = 3;

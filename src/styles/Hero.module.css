@@ -3,7 +3,8 @@
   background-image: url("/images/Familia2.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
 }
 

@@ -16,7 +16,7 @@ const iconMap = {
 
 const ActivityLocations: React.FC = () => {
   return (
-    <section id="locations" className={styles.section}>
+    <section id="work" className={styles.section}>
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
