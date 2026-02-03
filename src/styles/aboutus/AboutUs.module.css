@@ -1,0 +1,94 @@
+.aboutSection {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.badgeWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #2ec4b6, #a3d5cf);
+  color: #003d42;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #006d77;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch; /* 🔑 misma altura */
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.paragraph {
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.subTitle {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #006d77;
+}
+
+.valuesList {
+  list-style: none;
+  padding: 0;
+}
+
+.valuesList li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  color: #004d51;
+}
+
+.imageWrapper {
+  height: 100%; /* 🔑 ocupa todo el alto del texto */
+  max-height: none; /* quitamos el límite en desktop */
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .textWrapper {
+    order: 1;
+  }
+
+  .imageWrapper {
+    order: 2; /* 👇 aparece después de leer */
+    height: 280px; /* tamaño controlado en mobile */
+    margin-top: 1.5rem;
+  }
+}

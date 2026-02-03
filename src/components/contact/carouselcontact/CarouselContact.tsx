@@ -58,7 +58,7 @@ const CarouselContact: React.FC = () => {
           >
             <div className={styles.personCard}>
               <Image
-                src="/images/persona.png"
+                src="/images/Chicos5.png"
                 alt={person.name}
                 width={120}
                 height={120}

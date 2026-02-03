@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
             ].map((person, index) => (
               <div key={index} className={styles.personCard}>
                 <Image
-                  src="/images/persona.png"
+                  src="/images/Chicos1.png"
                   alt={person.name}
                   width={120}
                   height={120}

@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         <div className={styles.content}>
           {/* LOGO ARRIBA */}
           <motion.img
-            src="/logos/BrigadasCelesteNegro.png"
+            src="/logos/BrigadasBlanco.png"
             alt="Brigadas Educativas"
             className={styles.logo}
             initial={{ opacity: 0, y: -20 }}

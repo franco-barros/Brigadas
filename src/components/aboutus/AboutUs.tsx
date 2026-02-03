@@ -1,77 +1,73 @@
 "use client";
 
 import React from "react";
-import styles from "../../styles/AboutUs.module.css";
-import Image from "next/image";
+import styles from "../../styles/aboutus/AboutUs.module.css";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
-import { Heart, BookOpen, Users, Globe, Award, Zap } from "lucide-react";
+import { BookOpen, Users, Globe, Award, Zap } from "lucide-react";
+import ImageCarousel from "./imagecarousel";
 
 const AboutUs: React.FC = () => {
   return (
     <section id="aboutus" className={styles.aboutSection}>
       <FadeInOnScroll>
-        {/* Badge arriba del título */}
+        {/* Badge */}
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
-            <Users size={16} style={{ marginRight: "0.5rem" }} />
+            <Users size={16} />
             Brigada Educativa
           </span>
         </div>
 
-        {/* Título general */}
         <h2 className={styles.sectionTitle}>Quiénes Somos</h2>
 
         <div className={styles.container}>
+          {/* TEXTO */}
           <div className={styles.textWrapper}>
             <p className={styles.paragraph}>
-              Somos una organización comprometida con la educación y el
-              desarrollo social de las comunidades más vulnerables. Nuestra
-              brigada está formada por voluntarios apasionados por generar un
-              cambio positivo en la sociedad.
+              Somos una organización de estudiantes universitarios y
+              profesionales comprometidos con la educación y el desarrollo
+              social de barrios populares y comunidades vulnerables. Creemos en
+              la organización y el trabajo colectivo como forma de construir
+              comunidad. Nuestro trabajo se construye desde el hacer: estar,
+              escuchar, acompañar y organizarse de manera colectiva, en
+              articulación con otros actores del territorio.
             </p>
 
             <p className={styles.paragraph}>
               Creemos que la educación es la herramienta más poderosa para
-              transformar vidas y comunidades. Trabajamos día a día para llevar
-              oportunidades de aprendizaje a quienes más lo necesitan.
+              transformar vidas y comunidades.
             </p>
 
             <h3 className={styles.subTitle}>Nuestros Pilares</h3>
+
             <ul className={styles.valuesList}>
               <li>
-                <Heart size={20} className={styles.icon} />
-                <span>Compromiso y Pasión por la Comunidad</span>
+                <BookOpen size={20} /> Compromiso y trabajo en equipo
               </li>
               <li>
-                <BookOpen size={20} className={styles.icon} />
-                <span>Acceso Igualitario a la Educación</span>
+                <Users size={20} /> Acceso Igualitario a la Educación
               </li>
               <li>
-                <Users size={20} className={styles.icon} />
-                <span>Trabajo en Equipo y Solidaridad</span>
+                <Globe size={20} /> Solidaridad con la comunidad
               </li>
               <li>
-                <Globe size={20} className={styles.icon} />
-                <span>Respeto y Cuidado del Entorno</span>
+                <Award size={20} /> Organización juvenil
               </li>
               <li>
-                <Award size={20} className={styles.icon} />
-                <span>Excelencia y Calidad en Nuestro Trabajo</span>
-              </li>
-              <li>
-                <Zap size={20} className={styles.icon} />
-                <span>Innovación para Impactar Mejor</span>
+                <Zap size={20} /> Presencia en Barrios Populares
               </li>
             </ul>
           </div>
 
+          {/* IMAGEN / CAROUSEL */}
           <div className={styles.imageWrapper}>
-            <Image
-              src="/images/Chicos5.png"
-              alt="Voluntarios Brigada Educativa"
-              width={500}
-              height={400}
-              className={styles.image}
+            <ImageCarousel
+              images={[
+                "/images/Familia.png",
+                "/images/Familia7.png",
+                "/images/Familia6.png",
+                "/images/Familia2.png",
+              ]}
             />
           </div>
         </div>
