@@ -1,0 +1,98 @@
+/* ===============================
+   SECTION BASE
+================================ */
+.section {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background: #ffffff;
+  text-align: center;
+  scroll-margin-top: 120px;
+}
+
+/* Badge */
+.badgeWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: rgba(0, 109, 119, 0.08);
+  color: #006d77;
+}
+
+/* Title */
+.mainTitle {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #012a2f;
+  margin-bottom: 1rem;
+}
+
+.mainTitle span {
+  color: #006d77;
+}
+
+/* Intro */
+.intro {
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* ===============================
+   GRID DESKTOP
+================================ */
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+.desktopOnly {
+  display: grid;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+/* ===============================
+   ICON STYLE
+================================ */
+.icon {
+  color: #006d77;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+  }
+
+  .section {
+    padding: 4rem 1.2rem;
+  }
+
+  .intro {
+    margin-bottom: 2.5rem;
+  }
+}

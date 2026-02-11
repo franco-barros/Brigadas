@@ -1,0 +1,156 @@
+.wrapper {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, rgba(131, 197, 190, 0.15));
+}
+
+/* ===============================
+   TÍTULO
+================================ */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #003844;
+}
+
+/* ===============================
+   CARRUSEL WRAPPER
+================================ */
+.carouselWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===============================
+   TRACK (Framer Motion)
+================================ */
+.track {
+  display: flex;
+  width: max-content;
+  gap: 2rem;
+  padding: 1rem 0;
+  cursor: grab;
+}
+
+/* ===============================
+   LOGO CARD BASE
+================================ */
+.logoBox {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.2rem;
+
+  /* Fondo premium */
+  background: rgba(0, 56, 68, 0.85);
+  border: 1px solid rgba(0, 109, 119, 0.25);
+
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+/* ✅ Hover SOLO desktop */
+@media (hover: hover) and (pointer: fine) {
+  .logoBox:hover {
+    transform: translateY(-8px) scale(1.08);
+
+    /* Hover más oscuro (mejor contraste) */
+    background: rgba(0, 56, 68, 0.95);
+
+    /* Glow más premium sin blanquear */
+    border: 1px solid rgba(131, 197, 190, 0.35);
+
+    box-shadow: 0 18px 45px rgba(131, 197, 190, 0.22);
+
+    z-index: 5;
+  }
+}
+
+/* ===============================
+   LOGO IMG
+================================ */
+.logo {
+  max-width: 170px;
+  max-height: 80px;
+  object-fit: contain;
+  opacity: 0.98;
+}
+
+/* ===============================
+   FADE EDGES (desktop)
+================================ */
+.carouselWrapper::before,
+.carouselWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carouselWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.carouselWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+/* ===============================
+   MOBILE FIX 🔥
+================================ */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Sin fades */
+  .carouselWrapper::before,
+  .carouselWrapper::after {
+    display: none;
+  }
+
+  /* Track más compacto */
+  .track {
+    gap: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  /* ✅ Caja NO estirada */
+  .logoBox {
+    width: 180px; /* fijo */
+    height: 105px;
+
+    padding: 0.9rem;
+
+    /* Fondo oscuro para logos blancos */
+    background: rgba(0, 56, 68, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Logo más visible */
+  .logo {
+    max-width: 140px;
+    max-height: 65px;
+    opacity: 1;
+  }
+}
