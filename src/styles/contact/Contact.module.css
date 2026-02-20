@@ -23,12 +23,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: linear-gradient(135deg, #83c5be, #a3d5cf);
+  background: linear-gradient(135deg, #fde68a, #fcd34d);
   padding: 0.3rem 0.8rem;
   border-radius: 1.5rem;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #003d42;
+  color: #444;
 }
 
 .title {
@@ -66,7 +66,6 @@
   gap: 0.4rem;
 }
 
-/* LABEL CON ICONO */
 .labelWithIcon {
   display: flex;
   align-items: center;
@@ -80,7 +79,6 @@
   color: #006d77;
 }
 
-/* INPUTS */
 .formGroup input,
 .formGroup select,
 .formGroup textarea {
@@ -112,17 +110,38 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
 }
 
 /* ================================
-   INSTAGRAM
+   PODCAST + INSTAGRAM
 ================================ */
-.instagramButtonContainer {
+.cardsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.podcastCard,
+.instagramCard {
+  position: relative;
+  border-radius: 12px;
+  padding: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.instagramButton {
+.podcastCard {
+  background: linear-gradient(135deg, #78c7d2, #3ca1af);
+  color: #003d42;
+}
+
+.instagramCard {
   background: linear-gradient(
     135deg,
     #f09433,
@@ -132,33 +151,10 @@
     #bc1888
   );
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
-/* ================================
-   PODCAST + VOLUNTARIADO
-================================ */
-.cardsRow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.podcastCard {
-  position: relative;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #78c7d2, #3ca1af);
-  padding: 2rem;
-  color: #003d42;
-}
-
-.podcastCardIcon {
+.podcastCardIcon,
+.instagramCardIcon {
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -166,59 +162,45 @@
   opacity: 0.15;
 }
 
-.podcastCardButton {
+.podcastCardButton,
+.instagramCardButton {
   margin-top: 1rem;
-  display: inline-block;
-  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
-  color: white;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
   padding: 0.6rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-}
 
-.volunteerSection {
-  background-color: #d9f8f3;
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-}
-
-.volunteerTitle {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #003d42;
-}
-
-.volunteerText {
-  color: #006d77;
-  margin: 1rem 0 1.5rem;
-}
-
-.volunteerButton {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.4rem;
-
-  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  text-decoration: none;
+  width: fit-content; /* 👈 evita que se estire */
+  align-self: center; /* 👈 lo centra dentro de la card */
 
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-.volunteerButton:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+.podcastCardButton {
+  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
+  color: white;
 }
 
-/* ================================
+.instagramCardButton {
+  background: white;
+  color: #cc2366;
+}
+
+.podcastCardButton:hover,
+.instagramCardButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================ 
    CONTACTOS
 ================================ */
 .contactGrid {
@@ -227,13 +209,54 @@
   gap: 1.5rem;
 }
 
+.personCard {
+  background: rgba(131, 197, 190, 0.16);
+  border: 1px solid rgba(0, 109, 119, 0.15);
+  border-radius: 18px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.personCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 109, 119, 0.15);
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  color: #006d77;
+  margin-bottom: 0.8rem;
+}
+
+.personName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #003d42;
+  margin-bottom: 0.35rem;
+}
+
+.personPhone {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #006d77;
+  text-decoration: none;
+}
+
+.personPhone:hover {
+  text-decoration: underline;
+}
+
 .carouselContactWrapper {
   display: none;
 }
 
-/* ================================
-   MOBILE
-================================ */
 @media (max-width: 768px) {
   .cardsRow {
     grid-template-columns: 1fr;
@@ -245,6 +268,7 @@
 
   .carouselContactWrapper {
     display: block;
+    margin-top: 1.5rem;
   }
 
   .submitButton {

@@ -2,30 +2,69 @@
 
 import React from "react";
 import styles from "../../styles/faqsection/FAQSection.module.css";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, CheckCircle, Users } from "lucide-react";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
-import { FAQTabsCarousel } from "./FAQtabscarousel";
 
 const FAQSection: React.FC = () => {
+  const whatsappNumber = "5491123456789";
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
   return (
     <FadeInOnScroll>
-      <section className={styles.faqSection} id="faq">
+      <section className={styles.faqSection} id="participar">
         <div className={styles.badge}>
-          <MessageCircle size={16} style={{ marginRight: "0.4rem" }} />
-          Preguntas Frecuentes
+          <MessageCircle size={16} />
+          Cómo Participar
         </div>
 
         <h2 className={styles.title}>
-          <span>Resuelve tus</span> <span>Dudas sobre la Brigada</span>
+          <span>Sumate a la</span> <span>Brigada Educativa</span>
         </h2>
 
-        <p className={styles.description}>
-          Aquí respondemos las preguntas más comunes sobre cómo funciona la
-          Brigada Educativa, cómo sumarte y el impacto que generamos en la
-          comunidad.
-        </p>
+        <div className={styles.volunteerCard}>
+          {/* Icono decorativo */}
+          <Users className={styles.backgroundIcon} />
 
-        <FAQTabsCarousel />
+          <h3 className={styles.volunteerTitle}>
+            Sumate a transformar el territorio
+          </h3>
+
+          <p className={styles.volunteerText}>
+            Somos un espacio abierto a la participación de jóvenes que tengan
+            ganas de involucrarse, aprender y trabajar colectivamente en el
+            territorio.
+          </p>
+
+          <p className={styles.volunteerText}>
+            No es necesario contar con experiencia previa. Lo importante es el
+            compromiso, la responsabilidad y las ganas de formar parte de un
+            espacio colectivo.
+          </p>
+
+          <ul className={styles.volunteerList}>
+            <li>
+              <CheckCircle size={18} />
+              Jóvenes con interés en la educación y el trabajo territorial
+            </li>
+            <li>
+              <CheckCircle size={18} />
+              Personas con ganas de participar de manera colectiva
+            </li>
+            <li>
+              <CheckCircle size={18} />
+              Quienes quieran aportar desde el compromiso y la responsabilidad
+            </li>
+          </ul>
+
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.volunteerButton}
+          >
+            Quiero participar
+          </a>
+        </div>
       </section>
     </FadeInOnScroll>
   );

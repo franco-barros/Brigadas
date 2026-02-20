@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "../../styles/whereweare/WhereWeAre.module.css";
 
-import { MapPin, Globe, UsersRound } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import { WhereWeAreCarousel } from "./wherewearecarousel";
@@ -15,35 +15,33 @@ import { WhereWeAreCard } from "./wherewearecard";
 const whereWeAreData = [
   {
     id: 1,
-    icon: "map",
-    title: "Presencia territorial",
-    text: "Trabajamos directamente en barrios y comunidades, construyendo redes locales.",
-    badge: "Territorio",
+    title: "Unión Vecinal Larman",
+    text: `La Unión Vecinal Larman es el lugar donde comenzamos nuestras actividades. 
+    En el año 2020 organizamos un merendero donde se realizaban principalmente 
+    actividades y juegos recreativos, con la intención de generar espacios de 
+    enseñanza para los niños y niñas que asistían.`,
+    badge: "Desde 2020",
   },
   {
     id: 2,
-    icon: "globe",
-    title: "Alcance regional",
-    text: "Desarrollamos proyectos en distintos puntos de la provincia y zonas cercanas.",
-    badge: "Presencia",
+    title: "Barrio Popular Villa La Esperanza",
+    text: `Ubicado en El Medanito, departamento Rawson, provincia de San Juan. 
+    La Esperanza cuenta con una comunidad de aproximadamente 28 familias, 
+    con múltiples necesidades básicas insatisfechas y derechos vulnerados. 
+    Allí realizamos clases de apoyo y talleres que acompañan el proceso 
+    educativo de niños, niñas y adolescentes.`,
+    badge: "Rawson",
   },
   {
     id: 3,
-    icon: "people",
-    title: "Trabajo articulado",
-    text: "Nos vinculamos con instituciones educativas, organizaciones y municipios.",
-    badge: "Redes",
+    title: "Barrio Popular Alfonso XIII",
+    text: `Es el asentamiento más grande en el cual desarrollamos nuestras actividades. 
+    Abordamos diversas problemáticas de vecinos y vecinas y contamos con un aula 
+    construida en la casa de una vecina del barrio para dictar clases de apoyo. 
+    La presencia territorial es una parte central de nuestro trabajo.`,
+    badge: "Territorio",
   },
 ];
-
-/* ===============================
-   ICON MAP
-================================ */
-const iconMap = {
-  map: <MapPin size={28} className={styles.icon} />,
-  globe: <Globe size={28} className={styles.icon} />,
-  people: <UsersRound size={28} className={styles.icon} />,
-};
 
 const WhereWeAre: React.FC = () => {
   return (
@@ -59,32 +57,28 @@ const WhereWeAre: React.FC = () => {
 
         {/* Title */}
         <h2 className={styles.mainTitle}>
-          Territorio y <span>Presencia</span>
+          Presencia en <span>barrios populares</span>
         </h2>
 
         {/* Intro */}
         <p className={styles.intro}>
-          Nuestra labor se desarrolla en territorio, acompañando procesos
-          comunitarios y fortaleciendo vínculos institucionales en distintas
-          zonas.
+          En San Juan existen alrededor de 81 barrios populares registrados en
+          el Registro Nacional de Barrios Populares. Son espacios donde viven al
+          menos ocho familias agrupadas, sin título de propiedad y con acceso
+          irregular a servicios básicos. Como Brigadas, desarrollamos nuestro
+          trabajo en tres barrios de la provincia.
         </p>
 
         {/* Desktop */}
         <div className={`${styles.cardsWrapper} ${styles.desktopOnly}`}>
-          {whereWeAreData.map(({ id, icon, title, text, badge }) => (
-            <WhereWeAreCard
-              key={id}
-              icon={iconMap[icon as keyof typeof iconMap]}
-              title={title}
-              text={text}
-              badge={badge}
-            />
+          {whereWeAreData.map(({ id, title, text, badge }) => (
+            <WhereWeAreCard key={id} title={title} text={text} badge={badge} />
           ))}
         </div>
 
         {/* Mobile */}
         <div className={styles.mobileOnly}>
-          <WhereWeAreCarousel data={whereWeAreData} iconMap={iconMap} />
+          <WhereWeAreCarousel data={whereWeAreData} />
         </div>
       </FadeInOnScroll>
     </section>

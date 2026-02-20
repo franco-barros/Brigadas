@@ -7,7 +7,6 @@ import { WhereWeAreCard } from "../wherewearecard";
 
 interface Item {
   id: number;
-  icon: string;
   title: string;
   text: string;
   badge: string;
@@ -15,12 +14,11 @@ interface Item {
 
 interface Props {
   data: Item[];
-  iconMap: Record<string, React.ReactNode>;
 }
 
 const AUTOPLAY_INTERVAL = 5000;
 
-const WhereWeAreCarousel: React.FC<Props> = ({ data, iconMap }) => {
+const WhereWeAreCarousel: React.FC<Props> = ({ data }) => {
   const [currentId, setCurrentId] = useState(data[0].id);
 
   useEffect(() => {
@@ -41,7 +39,6 @@ const WhereWeAreCarousel: React.FC<Props> = ({ data, iconMap }) => {
           item.id === currentId ? (
             <div key={item.id} className={styles.carouselSlide}>
               <WhereWeAreCard
-                icon={iconMap[item.icon]}
                 title={item.title}
                 text={item.text}
                 badge={item.badge}

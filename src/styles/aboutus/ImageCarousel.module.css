@@ -2,9 +2,11 @@
   position: relative;
   width: 100%;
   height: 100%;
-  max-height: 420px;
-  border-radius: 12px;
+
+  border-radius: 16px;
   overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .imageWrapper {
@@ -16,25 +18,17 @@
 
 .image {
   object-fit: cover;
+  border-radius: 16px;
+  animation: fadeIn 0.8s ease;
 }
 
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.nav:first-of-type {
-  left: 0.5rem;
-}
-
-.nav:last-of-type {
-  right: 0.5rem;
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+    transform: scale(1.015);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

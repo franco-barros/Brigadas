@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../styles/activitylocations/ActivityCard.module.css";
+import styles from "../../../styles/whatwedo/WhatWeDoCard.module.css";
 
 interface WhatWeDoCardProps {
   icon: React.ReactNode;

@@ -1,12 +1,7 @@
-/* ================================
-   NAVBAR BASE
-================================ */
 .navbar {
   --primary: #006d77;
   --accent: #83c5be;
   --text: #014d56;
-  --background: rgba(131, 197, 190, 0.85);
-  --border: rgba(0, 109, 119, 0.25);
 
   position: fixed;
   top: 0;
@@ -15,17 +10,19 @@
   z-index: 9999;
   width: 100%;
 
-  background-color: var(--background);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* ✅ ARRIBA: sólido */
+  background-color: var(--accent);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0, 109, 119, 0.25);
 
   transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+    background-color 0.35s ease,
+    backdrop-filter 0.35s ease,
+    box-shadow 0.35s ease;
 
-  height: 64px; /* 👈 ALTURA FIJA */
+  height: 64px;
   display: flex;
   align-items: center;
 
@@ -36,8 +33,18 @@
    SCROLLED (SIN CAMBIAR ALTURA)
 ================================ */
 .scrolled {
-  box-shadow: 0 2px 12px rgba(0, 109, 119, 0.35);
-  background-color: rgba(131, 197, 190, 0.95);
+  /* ✅ Totalmente transparente */
+  background-color: rgba(255, 255, 255, 0.05);
+
+  /* ✅ Glass real */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* ✅ Borde sutil tipo vidrio */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  /* ✅ Sombra suave flotante */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* ================================

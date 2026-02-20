@@ -1,38 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import styles from "../../../styles/aboutus/ImageCarousel.module.css";
 
 interface ImageCarouselProps {
   images: string[];
+  index: number;
+  setIndex: React.Dispatch<React.SetStateAction<number>>;
+  interval?: number;
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
-  const [index, setIndex] = useState(0);
+const ImageCarousel: React.FC<ImageCarouselProps> = ({
+  images,
+  index,
+  setIndex,
+  interval = 3000,
+}) => {
+  /* ✅ Autoplay */
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, interval);
 
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
-  const prev = () =>
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
+    return () => clearInterval(timer);
+  }, [images.length, interval, setIndex]);
 
   return (
     <div className={styles.carousel}>
-      <button onClick={prev} className={styles.nav}>
-        ‹
-      </button>
-
       <div className={styles.imageWrapper}>
         <Image
+          key={images[index]}
           src={images[index]}
           alt="Imagen Brigada Educativa"
           fill
+          priority
           className={styles.image}
         />
       </div>
-
-      <button onClick={next} className={styles.nav}>
-        ›
-      </button>
     </div>
   );
 };

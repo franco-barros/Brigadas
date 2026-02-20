@@ -9,22 +9,17 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  background: linear-gradient(135deg, #2ec4b6, #a3d5cf);
-  color: #003d42;
+  background: linear-gradient(135deg, #fde68a, #fcd34d);
+  color: #444;
   font-weight: 600;
   padding: 0.3rem 0.8rem;
   border-radius: 1.5rem;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
   box-shadow: 0 2px 6px rgba(131, 197, 190, 0.6);
-  transition: background-color 0.3s ease;
   cursor: default;
   margin: 0 auto 1rem;
   user-select: none;
-}
-
-.badge:hover {
-  background: linear-gradient(135deg, #a3d5cf, #2ec4b6);
 }
 
 .title {
@@ -34,15 +29,133 @@
 }
 
 .title span:first-child {
-  color: #003d42; /* celeste oscuro */
+  color: #003d42;
 }
 
 .title span:last-child {
-  color: #2ec4b6; /* celeste medio */
+  color: #2ec4b6;
 }
 
-.description {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 2.5rem;
+/* ================================
+   CARD VOLUNTARIADO PRO
+================================ */
+
+.volunteerCard {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+  padding: 2.8rem;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #d9f8f3, #bff3ec);
+  box-shadow: 0 15px 35px rgba(0, 109, 119, 0.15);
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.volunteerCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 109, 119, 0.25);
+}
+
+/* ICONO GRANDE DECORATIVO */
+.backgroundIcon {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+  opacity: 0.08;
+  color: #006d77;
+  pointer-events: none;
+}
+
+/* TITULO */
+.volunteerTitle {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #003d42;
+  margin-bottom: 1.2rem;
+}
+
+/* TEXTO */
+.volunteerText {
+  color: #006d77;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* LISTA */
+.volunteerList {
+  list-style: none;
+  padding: 0;
+  margin: 1.8rem 0;
+}
+
+.volunteerList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  margin-bottom: 0.9rem;
+  color: #004d51;
+  font-weight: 500;
+}
+
+.volunteerList svg {
+  color: #2ec4b6;
+}
+
+/* BOTÓN */
+.volunteerButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+
+  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
+  color: white;
+  padding: 0.85rem 2.2rem;
+  border-radius: 14px;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.volunteerButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .volunteerCard {
+    padding: 2rem;
+  }
+
+  .backgroundIcon {
+    display: none;
+  }
+
+  .volunteerTitle {
+    font-size: 1.6rem;
+  }
+
+  .volunteerButton {
+    width: 100%;
+  }
 }

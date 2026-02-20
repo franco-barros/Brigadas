@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { FaInstagram, FaStar } from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import CarouselContact from "./carouselcontact/CarouselContact";
 
@@ -38,7 +37,6 @@ const Contact: React.FC = () => {
       <FadeInOnScroll delay={0.1}>
         <div className={styles.formWrapper}>
           <form className={styles.contactForm}>
-            {/* NOMBRE */}
             <div className={styles.formGroup}>
               <div className={styles.labelWithIcon}>
                 <User size={16} />
@@ -53,7 +51,6 @@ const Contact: React.FC = () => {
               />
             </div>
 
-            {/* EMAIL */}
             <div className={styles.formGroup}>
               <div className={styles.labelWithIcon}>
                 <Mail size={16} />
@@ -68,7 +65,6 @@ const Contact: React.FC = () => {
               />
             </div>
 
-            {/* TELÉFONO */}
             <div className={styles.formGroup}>
               <div className={styles.labelWithIcon}>
                 <Phone size={16} />
@@ -77,7 +73,6 @@ const Contact: React.FC = () => {
               <input type="tel" id="phone" name="phone" placeholder="264..." />
             </div>
 
-            {/* MOTIVO */}
             <div className={styles.formGroup}>
               <div className={styles.labelWithIcon}>
                 <ListChecks size={16} />
@@ -92,7 +87,6 @@ const Contact: React.FC = () => {
               </select>
             </div>
 
-            {/* MENSAJE */}
             <div className={styles.formGroup}>
               <div className={styles.labelWithIcon}>
                 <MessageSquare size={16} />
@@ -114,21 +108,6 @@ const Contact: React.FC = () => {
         </div>
       </FadeInOnScroll>
 
-      {/* INSTAGRAM */}
-      <FadeInOnScroll delay={0.2}>
-        <div className={styles.instagramButtonContainer}>
-          <Link
-            href="https://www.instagram.com/brigadaseducativas.sj"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.instagramButton}
-          >
-            <FaInstagram />
-            Seguinos en @brigadaseducativas.sj
-          </Link>
-        </div>
-      </FadeInOnScroll>
-
       {/* CONTACTOS */}
       <FadeInOnScroll delay={0.3}>
         <>
@@ -139,22 +118,11 @@ const Contact: React.FC = () => {
               { name: "Julieta Herrera", phone: "2645856333" },
             ].map((person, index) => (
               <div key={index} className={styles.personCard}>
-                <Image
-                  src="/images/Chicos1.png"
-                  alt={person.name}
-                  width={120}
-                  height={120}
-                  className={styles.profileImage}
-                />
-                <div className={styles.item}>
-                  <Phone className={styles.icon} />
-                  <p>
-                    {person.name}:{" "}
-                    <a href={`tel:${person.phone}`} className={styles.phone}>
-                      {person.phone}
-                    </a>
-                  </p>
-                </div>
+                <Phone className={styles.icon} />
+                <p className={styles.personName}>{person.name}</p>
+                <a href={`tel:${person.phone}`} className={styles.personPhone}>
+                  {person.phone}
+                </a>
               </div>
             ))}
           </div>
@@ -165,12 +133,13 @@ const Contact: React.FC = () => {
         </>
       </FadeInOnScroll>
 
-      {/* PODCAST + VOLUNTARIADO */}
+      {/* PODCAST + INSTAGRAM */}
       <FadeInOnScroll delay={0.4}>
         <div className={styles.cardsRow}>
+          {/* PODCAST */}
           <div className={styles.podcastCard}>
             <Mic className={styles.podcastCardIcon} size={100} />
-            <p className={styles.podcastCardText}>
+            <p>
               Escuchá nuestro podcast y conocé las voces de los protagonistas.
             </p>
             <Link
@@ -183,22 +152,22 @@ const Contact: React.FC = () => {
             </Link>
           </div>
 
-          <div className={styles.volunteerSection}>
-            <h3 className={styles.volunteerTitle}>
-              ¿Querés ser parte de la Brigada?
-            </h3>
-            <p className={styles.volunteerText}>
-              Siempre estamos buscando personas comprometidas que quieran
-              sumarse a nuestro trabajo.
+          {/* INSTAGRAM */}
+          <div className={styles.instagramCard}>
+            <FaInstagram className={styles.instagramCardIcon} size={100} />
+            <p className={styles.instagramCardText}>
+              Seguinos en Instagram y enterate de nuestras actividades,
+              convocatorias y novedades.
             </p>
-            <a
-              href="https://wa.me/5492641234567"
+            <Link
+              href="https://www.instagram.com/brigadaseducativas.sj"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.volunteerButton}
+              className={styles.instagramCardButton}
             >
-              Quiero Ser Voluntario/a
-            </a>
+              <FaInstagram />
+              @brigadaseducativas.sj
+            </Link>
           </div>
         </div>
       </FadeInOnScroll>

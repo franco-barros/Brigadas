@@ -1,12 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/aboutus/AboutUs.module.css";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import { BookOpen, Users, Globe, Award, Zap } from "lucide-react";
 import ImageCarousel from "./imagecarousel";
 
 const AboutUs: React.FC = () => {
+  const images = [
+    "/images/Familia.png",
+    "/images/Familia7.png",
+    "/images/Familia6.png",
+    "/images/Familia2.png",
+  ];
+
+  const [index, setIndex] = useState(0);
+
   return (
     <section id="aboutus" className={styles.aboutSection}>
       <FadeInOnScroll>
@@ -59,16 +68,22 @@ const AboutUs: React.FC = () => {
             </ul>
           </div>
 
-          {/* IMAGEN / CAROUSEL */}
+          {/* IMAGEN + DOTS */}
           <div className={styles.imageWrapper}>
-            <ImageCarousel
-              images={[
-                "/images/Familia.png",
-                "/images/Familia7.png",
-                "/images/Familia6.png",
-                "/images/Familia2.png",
-              ]}
-            />
+            <ImageCarousel images={images} index={index} setIndex={setIndex} />
+
+            {/* DOTS */}
+            <div className={styles.carouselDots}>
+              {images.map((_, i) => (
+                <span
+                  key={i}
+                  className={`${styles.dot} ${
+                    i === index ? styles.activeDot : ""
+                  }`}
+                  onClick={() => setIndex(i)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </FadeInOnScroll>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "../../../styles/activitylocations/ActivityCarousel.module.css";
+import styles from "../../../styles/whatwedo/WhatWeDoCarousel.module.css";
 
 import WhatWeDoCard from "../whatwedocard/WhatWeDoCard";
 

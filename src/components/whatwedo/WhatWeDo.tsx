@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "../../styles/activitylocations/ActivityLocations.module.css";
+import styles from "../../styles/whatwedo/WhatWeDo.module.css";
 
 import { Target, Users, BookOpen, HandHeart } from "lucide-react";
 
@@ -33,13 +33,6 @@ const whatWeDoData = [
     title: "Promoción cultural",
     text: "Generamos propuestas culturales que refuerzan la identidad y participación.",
     badge: "Cultura",
-  },
-  {
-    id: 4,
-    icon: "heart",
-    title: "Redes solidarias",
-    text: "Articulamos con organizaciones e instituciones para ampliar el impacto.",
-    badge: "Cooperación",
   },
 ];
 

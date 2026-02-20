@@ -15,8 +15,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: linear-gradient(135deg, #2ec4b6, #a3d5cf);
-  color: #003d42;
+  background: linear-gradient(135deg, #fde68a, #fcd34d);
+  color: #444;
   font-weight: 600;
   padding: 0.3rem 0.8rem;
   border-radius: 1.5rem;
@@ -35,13 +35,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: stretch; /* 🔑 misma altura */
+  align-items: stretch;
 }
 
 .textWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .paragraph {
@@ -72,23 +71,45 @@
   color: #004d51;
 }
 
+/* Wrapper del carousel dentro del about */
 .imageWrapper {
-  height: 100%; /* 🔑 ocupa todo el alto del texto */
-  max-height: none; /* quitamos el límite en desktop */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* ================================
+   DOTS (AHORA VAN EN ABOUT)
+================================ */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.activeDot {
+  width: 26px;
+  border-radius: 999px;
+  background: #006d77;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
   }
 
-  .textWrapper {
-    order: 1;
-  }
-
   .imageWrapper {
-    order: 2; /* 👇 aparece después de leer */
-    height: 280px; /* tamaño controlado en mobile */
     margin-top: 1.5rem;
   }
 }
