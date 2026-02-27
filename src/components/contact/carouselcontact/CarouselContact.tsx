@@ -6,7 +6,6 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import styles from "../../../styles/contact/CarouselContact.module.css";
 import { Phone } from "lucide-react";
-import Image from "next/image";
 
 interface Person {
   name: string;
@@ -31,7 +30,6 @@ const CarouselContact: React.FC = () => {
       setCurrentSlide(slider.track.details.rel);
     },
     created(slider) {
-      // Inicia autoplay al crearse el slider
       if (timer.current) clearInterval(timer.current);
       timer.current = setInterval(() => {
         slider.next();
@@ -40,7 +38,6 @@ const CarouselContact: React.FC = () => {
   });
 
   useEffect(() => {
-    // Limpia el intervalo al desmontar
     return () => {
       if (timer.current) clearInterval(timer.current);
     };
@@ -57,13 +54,6 @@ const CarouselContact: React.FC = () => {
             className={`keen-slider__slide ${styles.slide}`}
           >
             <div className={styles.personCard}>
-              <Image
-                src="/images/Chicos5.png"
-                alt={person.name}
-                width={120}
-                height={120}
-                className={styles.profileImage}
-              />
               <div className={styles.item}>
                 <Phone className={styles.icon} />
                 <p>

@@ -71,16 +71,21 @@
   color: #004d51;
 }
 
-/* Wrapper del carousel dentro del about */
+.closingPhrase {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #006d77;
+}
+
+/* Wrapper del carousel */
 .imageWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* ================================
-   DOTS (AHORA VAN EN ABOUT)
-================================ */
+/* DOTS */
 .carouselDots {
   display: flex;
   justify-content: center;

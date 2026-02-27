@@ -122,7 +122,10 @@ export default function BrandsCarousel() {
 
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>Marcas que confían en nosotros</h2>
+      <h2 className={styles.title}>
+        Nuestra red de articulaciones con actores sociales, institucionales y
+        comunitarios
+      </h2>
 
       <div className={styles.carouselWrapper}>
         <motion.div

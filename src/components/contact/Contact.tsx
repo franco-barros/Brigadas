@@ -136,22 +136,6 @@ const Contact: React.FC = () => {
       {/* PODCAST + INSTAGRAM */}
       <FadeInOnScroll delay={0.4}>
         <div className={styles.cardsRow}>
-          {/* PODCAST */}
-          <div className={styles.podcastCard}>
-            <Mic className={styles.podcastCardIcon} size={100} />
-            <p>
-              Escuchá nuestro podcast y conocé las voces de los protagonistas.
-            </p>
-            <Link
-              href="https://open.spotify.com/show/tu-podcast-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.podcastCardButton}
-            >
-              Ir al Podcast
-            </Link>
-          </div>
-
           {/* INSTAGRAM */}
           <div className={styles.instagramCard}>
             <FaInstagram className={styles.instagramCardIcon} size={100} />
@@ -167,6 +151,22 @@ const Contact: React.FC = () => {
             >
               <FaInstagram />
               @brigadaseducativas.sj
+            </Link>
+          </div>
+
+          {/* PODCAST */}
+          <div className={styles.podcastCard}>
+            <Mic className={styles.podcastCardIcon} size={100} />
+            <p>
+              Escuchá nuestro podcast y conocé las voces de los protagonistas.
+            </p>
+            <Link
+              href="https://open.spotify.com/show/tu-podcast-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.podcastCardButton}
+            >
+              Ir al Podcast
             </Link>
           </div>
         </div>

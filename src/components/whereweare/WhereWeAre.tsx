@@ -16,29 +16,19 @@ const whereWeAreData = [
   {
     id: 1,
     title: "Unión Vecinal Larman",
-    text: `La Unión Vecinal Larman es el lugar donde comenzamos nuestras actividades. 
-    En el año 2020 organizamos un merendero donde se realizaban principalmente 
-    actividades y juegos recreativos, con la intención de generar espacios de 
-    enseñanza para los niños y niñas que asistían.`,
+    text: `La Unión Vecinal Larman es el lugar donde comenzamos nuestras actividades, con un merendero organizado en el año 2020 donde realizabamos principalmente actividades y juegos recreativos, pero con la intención de generar espacios de enseñanza para los niños y niñas que asistían.`,
     badge: "Desde 2020",
   },
   {
     id: 2,
     title: "Barrio Popular Villa La Esperanza",
-    text: `Ubicado en El Medanito, departamento Rawson, provincia de San Juan. 
-    La Esperanza cuenta con una comunidad de aproximadamente 28 familias, 
-    con múltiples necesidades básicas insatisfechas y derechos vulnerados. 
-    Allí realizamos clases de apoyo y talleres que acompañan el proceso 
-    educativo de niños, niñas y adolescentes.`,
+    text: `El barrio está ubicado en el Medanito, departamento Rawson, de la provincia de San Juan. La Esperanza cuenta con una comunidad pequeña, compuesta por unas 28 familias, con muchas necesidades básicas insatisfechas y derechos vulnerados. Realizamos actividades que van desde clases de apoyo a variados talleres que acompañan el proceso educativo de cada niño, niña y adolescente.`,
     badge: "Rawson",
   },
   {
     id: 3,
     title: "Barrio Popular Alfonso XIII",
-    text: `Es el asentamiento más grande en el cual desarrollamos nuestras actividades. 
-    Abordamos diversas problemáticas de vecinos y vecinas y contamos con un aula 
-    construida en la casa de una vecina del barrio para dictar clases de apoyo. 
-    La presencia territorial es una parte central de nuestro trabajo.`,
+    text: `Es el asentamiento más grande en el cual desarrollamos nuestras actividades. Abordamos las problemáticas de muchos vecinos y vecinas, realizando un trabajo integral. Para el dictado de las clases de apoyo contamos con un aula que logramos construir en la casa de una vecina del barrio. `,
     badge: "Territorio",
   },
 ];

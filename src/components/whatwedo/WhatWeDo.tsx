@@ -16,22 +16,22 @@ const whatWeDoData = [
   {
     id: 1,
     icon: "target",
-    title: "Formación comunitaria",
-    text: "Impulsamos espacios educativos y talleres para fortalecer capacidades locales.",
+    title: "Acompañamiento educativo",
+    text: "Presencia sostenida y trabajo cercano con niños, niñas y familias.",
     badge: "Educación",
   },
   {
     id: 2,
     icon: "users",
-    title: "Acompañamiento social",
-    text: "Trabajamos junto a familias y comunidades en procesos de inclusión y apoyo.",
+    title: "Trabajo territorial",
+    text: "Construcción de vínculos en los barrios, desde la escucha y la participación.",
     badge: "Comunidad",
   },
   {
     id: 3,
     icon: "book",
-    title: "Promoción cultural",
-    text: "Generamos propuestas culturales que refuerzan la identidad y participación.",
+    title: "Organización juvenil",
+    text: "Jóvenes comprometidos que se forman y participan activamente",
     badge: "Cultura",
   },
 ];
@@ -54,20 +54,23 @@ const WhatWeDo: React.FC = () => {
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
             <Target size={16} style={{ marginRight: "0.4rem" }} />
-            Qué hacemos
+            Nuestro trabajo
           </span>
         </div>
 
         {/* Title */}
         <h2 className={styles.mainTitle}>
-          Nuestros <span>Ejes de Trabajo</span>
+          <span>Que Hacemos</span>
         </h2>
 
         {/* Intro */}
         <p className={styles.intro}>
-          Desarrollamos acciones educativas, sociales y comunitarias con un
-          enfoque integral, promoviendo oportunidades y fortaleciendo redes
-          territoriales.
+          Construimos desde la presencia en el territorio y el acompañamiento
+          educativo, con una mirada colectiva y comunitaria. Desarrollamos
+          acciones de apoyo escolar personalizado, talleres recreativos y
+          actividades con perspectiva social con la premisa de que todos los
+          niños, niñas y adolescentes de barrios populares tienen derecho a
+          asistir a la escuela y a ser acompañados en su proceso formativo.
         </p>
 
         {/* Desktop */}

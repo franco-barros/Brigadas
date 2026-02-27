@@ -37,14 +37,7 @@ const AboutUs: React.FC = () => {
               profesionales comprometidos con la educación y el desarrollo
               social de barrios populares y comunidades vulnerables. Creemos en
               la organización y el trabajo colectivo como forma de construir
-              comunidad. Nuestro trabajo se construye desde el hacer: estar,
-              escuchar, acompañar y organizarse de manera colectiva, en
-              articulación con otros actores del territorio.
-            </p>
-
-            <p className={styles.paragraph}>
-              Creemos que la educación es la herramienta más poderosa para
-              transformar vidas y comunidades.
+              comunidad.
             </p>
 
             <h3 className={styles.subTitle}>Nuestros Pilares</h3>
@@ -66,13 +59,18 @@ const AboutUs: React.FC = () => {
                 <Zap size={20} /> Presencia en Barrios Populares
               </li>
             </ul>
+
+            <p className={`${styles.paragraph} ${styles.closingPhrase}`}>
+              Nuestro trabajo se construye desde el hacer: estar, escuchar,
+              acompañar y organizarse de manera colectiva, en articulación con
+              otros actores del territorio.
+            </p>
           </div>
 
           {/* IMAGEN + DOTS */}
           <div className={styles.imageWrapper}>
             <ImageCarousel images={images} index={index} setIndex={setIndex} />
 
-            {/* DOTS */}
             <div className={styles.carouselDots}>
               {images.map((_, i) => (
                 <span
