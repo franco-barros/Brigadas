@@ -8,6 +8,7 @@ import { MapPin } from "lucide-react";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import { WhereWeAreCarousel } from "./wherewearecarousel";
 import { WhereWeAreCard } from "./wherewearecard";
+import { WhereWeAreGallery } from "./wherewearegallery";
 
 /* ===============================
    DATA (Dónde estamos)
@@ -28,7 +29,7 @@ const whereWeAreData = [
   {
     id: 3,
     title: "Barrio Popular Alfonso XIII",
-    text: `Es el asentamiento más grande en el cual desarrollamos nuestras actividades. Abordamos las problemáticas de muchos vecinos y vecinas, realizando un trabajo integral. Para el dictado de las clases de apoyo contamos con un aula que logramos construir en la casa de una vecina del barrio. `,
+    text: `Es el asentamiento más grande en el cual desarrollamos nuestras actividades. Abordamos las problemáticas de muchos vecinos y vecinas, realizando un trabajo integral. Para el dictado de las clases de apoyo contamos con un aula que logramos construir en la casa de una vecina del barrio.`,
     badge: "Territorio",
   },
 ];
@@ -70,6 +71,9 @@ const WhereWeAre: React.FC = () => {
         <div className={styles.mobileOnly}>
           <WhereWeAreCarousel data={whereWeAreData} />
         </div>
+
+        {/* Galería */}
+        <WhereWeAreGallery />
       </FadeInOnScroll>
     </section>
   );

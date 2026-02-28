@@ -1,0 +1,129 @@
+/* ===============================
+   SECTION
+================================ */
+.gallerySection {
+  margin-top: 6rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.title {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  color: #0f172a; /* slate-900 */
+  letter-spacing: -0.5px;
+}
+
+/* ===============================
+   ZONE BLOCK
+================================ */
+/* ===============================
+   ZONE TITLE DECORATIVO
+================================ */
+.zoneTitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 2.2rem auto; /* centrado */
+  padding: 0.6rem 1.4rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  color: #006d77;
+  background: rgba(0, 109, 119, 0.08);
+  border: 1px solid rgba(0, 109, 119, 0.18);
+  border-radius: 999px;
+
+  position: relative;
+}
+
+/* Línea decorativa sutil debajo */
+.zoneTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: rgba(0, 109, 119, 0.4);
+  border-radius: 2px;
+}
+
+/* ===============================
+   GRID
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+/* ===============================
+   IMAGE CARD
+================================ */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.imageWrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Overlay sutil profesional */
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.imageWrapper:hover::after {
+  opacity: 1;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .gallerySection {
+    margin-top: 4rem;
+    padding-top: 3rem;
+  }
+
+  .zoneBlock {
+    margin-bottom: 3.5rem;
+  }
+
+  .imageWrapper {
+    height: 200px;
+  }
+}
