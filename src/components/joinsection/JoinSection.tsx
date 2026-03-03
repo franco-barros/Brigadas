@@ -11,7 +11,7 @@ const JoinSection: React.FC = () => {
 
   return (
     <FadeInOnScroll>
-      <section className={styles.JoinSection} id="participar">
+      <section className={styles.JoinSection} id="participate">
         <div className={styles.badge}>
           <MessageCircle size={16} />
           Cómo Participar

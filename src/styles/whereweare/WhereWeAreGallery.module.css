@@ -2,18 +2,25 @@
    SECTION
 ================================ */
 .gallerySection {
-  margin-top: 6rem;
-  padding-top: 4rem;
+  margin-top: 7rem;
+  padding-top: 5rem;
   border-top: 1px solid rgba(0, 159, 227, 0.15);
 }
 
 .title {
   font-size: clamp(1.6rem, 2vw, 2rem);
   font-weight: 700;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
   text-align: center;
   color: #0f172a;
   letter-spacing: -0.5px;
+}
+
+/* ===============================
+   ZONE BLOCK (SEPARACIÓN REAL)
+================================ */
+.zoneBlock {
+  margin-bottom: 5rem; /* 👈 separación entre cada zona */
 }
 
 /* ===============================
@@ -24,7 +31,7 @@
   align-items: center;
   justify-content: center;
 
-  margin: 0 auto 2.2rem auto;
+  margin: 0 auto 3.5rem auto; /* 👈 más espacio antes de la grilla */
   padding: 0.6rem 1.4rem;
 
   font-size: 0.95rem;
@@ -43,7 +50,7 @@
 .zoneTitle::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -12px; /* 👈 ahora sí separado visualmente */
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
@@ -66,6 +73,7 @@
 ================================ */
 .imageWrapper {
   position: relative;
+  isolation: isolate;
   width: 100%;
   height: 240px;
   border-radius: 18px;
@@ -84,7 +92,7 @@
   box-shadow: 0 16px 35px rgba(0, 159, 227, 0.18);
 }
 
-/* Overlay profesional sin tapar texto */
+/* Overlay profesional */
 .imageWrapper::after {
   content: "";
   position: absolute;
@@ -92,10 +100,9 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 1; /* queda debajo del texto */
+  z-index: 1;
 }
 
-/* Activación overlay */
 .imageWrapper:hover::after {
   opacity: 1;
 }
@@ -111,7 +118,7 @@
   transform: scale(1.08);
 }
 
-/* IMPORTANTE: asegurar que el nombre esté encima */
+/* Asegurar texto por encima */
 .imageWrapper .imageName,
 .imageWrapper h3,
 .imageWrapper span {
@@ -130,14 +137,14 @@
   }
 
   .zoneBlock {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
   }
 
   .imageWrapper {
     height: 200px;
   }
 
-  /* 🔥 Desactivar hover en mobile */
+  /* Desactivar hover en mobile */
   .imageWrapper:hover {
     transform: none;
     box-shadow: 0 8px 25px rgba(0, 159, 227, 0.08);

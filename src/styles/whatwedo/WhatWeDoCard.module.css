@@ -1,23 +1,23 @@
 .card {
-  background-color: #e6f7ff; /* fondo cian suave */
-  border-radius: 12px;
-  padding: 1.8rem;
-  width: 100%;
-  max-width: 350px;
+  background: #ffffff;
+  border-radius: 1.4rem;
 
-  box-shadow: 0 4px 12px rgba(0, 159, 227, 0.08);
+  width: 320px; /* 👈 ancho fijo */
+  height: 380px; /* 👈 alto fijo */
 
-  text-align: center; /* 👈 centrado de texto */
+  padding: 2.4rem 2rem;
 
-  position: relative;
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 109, 119, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center; /* 👈 centra contenido horizontalmente */
-}
+  justify-content: center; /* 👈 centra vertical */
+  align-items: center; /* 👈 centra horizontal */
 
+  text-align: center;
+  transition: all 0.3s ease;
+}
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 24px rgba(0, 159, 227, 0.18);
@@ -29,18 +29,18 @@
 }
 
 .cardTitle {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 0.8rem 0 0.6rem;
   color: #005f99;
 }
 
 .cardText {
   font-size: 1rem;
   color: #1f2937;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  max-width: 90%; /* evita que el texto quede muy ancho */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 260px; /* evita que el texto se estire */
 }
 
 .cardBadge {

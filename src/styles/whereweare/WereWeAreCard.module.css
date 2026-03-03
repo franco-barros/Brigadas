@@ -1,11 +1,22 @@
 .card {
   background: #ffffff;
   border-radius: 1.4rem;
-  padding: 2.2rem 1.8rem;
+
+  width: 320px; /* 👈 ancho fijo */
+  height: 415px; /* 👈 alto fijo */
+
+  padding: 2.4rem 2rem;
+
   border: 1px solid rgba(0, 109, 119, 0.12);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 👈 centra vertical */
+  align-items: center; /* 👈 centra horizontal */
+
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
