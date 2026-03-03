@@ -18,7 +18,7 @@ interface CarouselProps {
   iconMap: Record<string, React.ReactNode>;
 }
 
-const AUTOPLAY_INTERVAL = 5000;
+const AUTOPLAY_INTERVAL = 4000;
 
 const WhatWeDoCarousel: React.FC<CarouselProps> = ({ data, iconMap }) => {
   const [currentId, setCurrentId] = useState(data[0].id);

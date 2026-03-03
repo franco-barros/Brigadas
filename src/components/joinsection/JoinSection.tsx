@@ -1,17 +1,17 @@
 "use client";
 
 import React from "react";
-import styles from "../../styles/faqsection/FAQSection.module.css";
+import styles from "../../styles/joinsection/JoinSection.module.css";
 import { MessageCircle, CheckCircle, Users } from "lucide-react";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 
-const FAQSection: React.FC = () => {
+const JoinSection: React.FC = () => {
   const whatsappNumber = "5491123456789";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (
     <FadeInOnScroll>
-      <section className={styles.faqSection} id="participar">
+      <section className={styles.JoinSection} id="participar">
         <div className={styles.badge}>
           <MessageCircle size={16} />
           Cómo Participar
@@ -24,10 +24,6 @@ const FAQSection: React.FC = () => {
         <div className={styles.volunteerCard}>
           {/* Icono decorativo */}
           <Users className={styles.backgroundIcon} />
-
-          <h3 className={styles.volunteerTitle}>
-            Sumate a transformar el territorio
-          </h3>
 
           <p className={styles.volunteerText}>
             Somos un espacio abierto a la participación de jóvenes que tengan
@@ -70,4 +66,4 @@ const FAQSection: React.FC = () => {
   );
 };
 
-export default FAQSection;
+export default JoinSection;

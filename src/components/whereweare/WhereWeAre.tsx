@@ -18,7 +18,7 @@ const whereWeAreData = [
     id: 1,
     title: "Unión Vecinal Larman",
     text: `La Unión Vecinal Larman es el lugar donde comenzamos nuestras actividades, con un merendero organizado en el año 2020 donde realizabamos principalmente actividades y juegos recreativos, pero con la intención de generar espacios de enseñanza para los niños y niñas que asistían.`,
-    badge: "Desde 2020",
+    badge: "Rawson",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const whereWeAreData = [
     id: 3,
     title: "Barrio Popular Alfonso XIII",
     text: `Es el asentamiento más grande en el cual desarrollamos nuestras actividades. Abordamos las problemáticas de muchos vecinos y vecinas, realizando un trabajo integral. Para el dictado de las clases de apoyo contamos con un aula que logramos construir en la casa de una vecina del barrio.`,
-    badge: "Territorio",
+    badge: "Pocito",
   },
 ];
 
@@ -74,6 +74,14 @@ const WhereWeAre: React.FC = () => {
 
         {/* Galería */}
         <WhereWeAreGallery />
+
+        {/* Base - Ubicación resumida */}
+        <div className={styles.baseInfo}>
+          <p>
+            <strong>Barrios:</strong> Rawson (Larman y La Esperanza) – Pocito
+            (Alfonso XIII)
+          </p>
+        </div>
       </FadeInOnScroll>
     </section>
   );

@@ -1,4 +1,4 @@
-.faqSection {
+.JoinSection {
   padding: 4rem 1.5rem;
   background-color: #f8f9fa;
   text-align: center;
@@ -16,7 +16,7 @@
   border-radius: 1.5rem;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
-  box-shadow: 0 2px 6px rgba(131, 197, 190, 0.6);
+  box-shadow: 0 2px 6px rgba(0, 159, 227, 0.4);
   cursor: default;
   margin: 0 auto 1rem;
   user-select: none;
@@ -29,11 +29,11 @@
 }
 
 .title span:first-child {
-  color: #003d42;
+  color: #005f8f;
 }
 
 .title span:last-child {
-  color: #2ec4b6;
+  color: #009fe3;
 }
 
 /* ================================
@@ -50,8 +50,8 @@
 
   border-radius: 20px;
 
-  background: linear-gradient(135deg, #d9f8f3, #bff3ec);
-  box-shadow: 0 15px 35px rgba(0, 109, 119, 0.15);
+  background: linear-gradient(135deg, #009fe3, #007bb3);
+  box-shadow: 0 15px 35px rgba(0, 159, 227, 0.25);
 
   text-align: center;
 
@@ -62,7 +62,7 @@
 
 .volunteerCard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0, 109, 119, 0.25);
+  box-shadow: 0 20px 45px rgba(0, 159, 227, 0.35);
 }
 
 /* ICONO GRANDE DECORATIVO */
@@ -74,7 +74,7 @@
   width: 180px;
   height: 180px;
   opacity: 0.08;
-  color: #006d77;
+  color: white;
   pointer-events: none;
 }
 
@@ -82,13 +82,13 @@
 .volunteerTitle {
   font-size: 1.9rem;
   font-weight: bold;
-  color: #003d42;
+  color: white;
   margin-bottom: 1.2rem;
 }
 
 /* TEXTO */
 .volunteerText {
-  color: #006d77;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 1.05rem;
@@ -108,12 +108,12 @@
   gap: 0.6rem;
 
   margin-bottom: 0.9rem;
-  color: #004d51;
+  color: white;
   font-weight: 500;
 }
 
 .volunteerList svg {
-  color: #2ec4b6;
+  color: white;
 }
 
 /* BOTÓN */
@@ -123,8 +123,8 @@
   align-items: center;
   gap: 0.4rem;
 
-  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
-  color: white;
+  background: white;
+  color: #009fe3;
   padding: 0.85rem 2.2rem;
   border-radius: 14px;
   font-weight: bold;

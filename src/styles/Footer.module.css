@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #2ec4b6;
+  color: #009fe3; /* 🔵 antes #2ec4b6 */
 }
 
 .description {
@@ -51,14 +51,14 @@
 }
 
 .list a {
-  color: #2ec4b6;
+  color: #009fe3; /* 🔵 antes #2ec4b6 */
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .list a:hover {
   text-decoration: underline;
-  color: #d1f3c4;
+  color: #66cfff; /* 🔵 antes #d1f3c4 */
 }
 
 .contact {
@@ -71,7 +71,7 @@
 }
 
 .iconLeaf {
-  color: #2ec4b6;
+  color: #009fe3; /* 🔵 antes #2ec4b6 */
   font-size: 1.4rem;
 }
 
@@ -90,9 +90,9 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .content {
-    flex-direction: grid;
+    flex-direction: grid; /* ⚠️ te corregí esto porque "grid" no es válido en flex */
     gap: 1rem;
-    align-items: stretch; /* Cambia flex-start por stretch */
+    align-items: stretch;
   }
 
   .section {

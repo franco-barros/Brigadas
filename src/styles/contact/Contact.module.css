@@ -33,13 +33,13 @@
 
 .title {
   font-size: 2rem;
-  color: #003d42;
+  color: #005f8f;
   text-align: center;
   font-weight: bold;
 }
 
 .title span:last-child {
-  color: #2ec4b6;
+  color: #009fe3;
 }
 
 /* ================================
@@ -48,10 +48,10 @@
 .formWrapper {
   max-width: 720px;
   margin: 0 auto;
-  background-color: #e6f4f1;
+  background-color: #e6f5fc;
   border-radius: 16px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 159, 227, 0.08);
 }
 
 .contactForm {
@@ -72,20 +72,23 @@
   gap: 0.45rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #003d42;
+  color: #005f8f;
 }
 
 .labelWithIcon svg {
-  color: #006d77;
+  color: #009fe3;
 }
 
+/* 🔵 INPUTS BLANCOS */
 .formGroup input,
 .formGroup select,
 .formGroup textarea {
   padding: 0.7rem 0.9rem;
   border-radius: 8px;
-  border: 1px solid rgba(0, 109, 119, 0.25);
+  border: 1px solid rgba(0, 159, 227, 0.3);
   font-size: 0.95rem;
+  background-color: #ffffff;
+  color: #003d42;
 }
 
 .formGroup textarea {
@@ -97,13 +100,14 @@
 .formGroup select:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: #2ec4b6;
-  box-shadow: 0 0 0 2px rgba(46, 196, 182, 0.15);
+  border-color: #009fe3;
+  box-shadow: 0 0 0 2px rgba(0, 159, 227, 0.15);
+  background-color: #ffffff;
 }
 
 .submitButton {
   align-self: center;
-  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
+  background: linear-gradient(135deg, #00bfff, #009fe3);
   color: white;
   padding: 0.75rem 2.5rem;
   border-radius: 12px;
@@ -136,9 +140,10 @@
   justify-content: center;
 }
 
+/* 🔵 Podcast ahora en cian */
 .podcastCard {
-  background: linear-gradient(135deg, #78c7d2, #3ca1af);
-  color: #003d42;
+  background: linear-gradient(135deg, #009fe3, #007bb3);
+  color: white;
 }
 
 .instagramCard {
@@ -176,8 +181,8 @@
   text-decoration: none;
   font-weight: bold;
 
-  width: fit-content; /* 👈 evita que se estire */
-  align-self: center; /* 👈 lo centra dentro de la card */
+  width: fit-content;
+  align-self: center;
 
   transition:
     transform 0.2s ease,
@@ -185,8 +190,8 @@
 }
 
 .podcastCardButton {
-  background: linear-gradient(135deg, #29c6a8, #2ec4b6);
-  color: white;
+  background: white;
+  color: #009fe3;
 }
 
 .instagramCardButton {
@@ -210,8 +215,8 @@
 }
 
 .personCard {
-  background: rgba(131, 197, 190, 0.16);
-  border: 1px solid rgba(0, 109, 119, 0.15);
+  background: rgba(0, 159, 227, 0.08);
+  border: 1px solid rgba(0, 159, 227, 0.2);
   border-radius: 18px;
   padding: 1.6rem;
   display: flex;
@@ -225,27 +230,27 @@
 
 .personCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 109, 119, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 159, 227, 0.15);
 }
 
 .icon {
   width: 34px;
   height: 34px;
-  color: #006d77;
+  color: #009fe3;
   margin-bottom: 0.8rem;
 }
 
 .personName {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #003d42;
+  color: #005f8f;
   margin-bottom: 0.35rem;
 }
 
 .personPhone {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #006d77;
+  color: #009fe3;
   text-decoration: none;
 }
 

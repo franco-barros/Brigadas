@@ -13,9 +13,9 @@
 /* ================= CARD ================= */
 
 .personCard {
-  background: linear-gradient(135deg, #e6fffb, #d9f8f3);
+  background: linear-gradient(135deg, #e6f7ff, #d9f1ff);
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 159, 227, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@
 
 .personCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 159, 227, 0.18);
 }
 
 /* ================= CONTENT ================= */
@@ -40,26 +40,26 @@
   gap: 0.8rem;
   font-size: 1.05rem;
   font-weight: 500;
-  color: #004d51;
+  color: #005f99;
   flex-wrap: wrap;
 }
 
 .icon {
-  color: #006d77;
+  color: #009fe3;
   width: 22px;
   height: 22px;
   flex-shrink: 0;
 }
 
 .phone {
-  color: #006d77;
+  color: #009fe3;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .phone:hover {
-  color: #004d51;
+  color: #0077b6;
   text-decoration: underline;
 }
 
@@ -72,23 +72,30 @@
   gap: 0.6rem;
 }
 
+/* DOT BASE */
 .dot {
   width: 10px;
   height: 10px;
-  background-color: #cbd5e1;
-  border-radius: 50%;
+  background-color: rgba(0, 159, 227, 0.25);
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition:
+    all 0.3s ease,
+    transform 0.2s ease;
 }
 
+/* HOVER */
 .dot:hover,
 .dot:focus {
-  background-color: #94a3b8;
+  background-color: rgba(0, 159, 227, 0.5);
+  transform: scale(1.1);
 }
 
+/* ACTIVE (pill elegante) */
 .active {
-  width: 24px;
+  width: 28px;
   border-radius: 999px;
-  background-color: #006d77;
+  background: linear-gradient(90deg, #00bfff, #009fe3);
+  box-shadow: 0 4px 10px rgba(0, 159, 227, 0.35);
 }

@@ -36,7 +36,7 @@ const galleryImages = [
 const WhereWeAreGallery = () => {
   return (
     <div className={styles.gallerySection}>
-      <h3 className={styles.title}>Nuestra presencia en territorio</h3>
+      <h3 className={styles.title}>Nuestro trabajo en el territorio</h3>
 
       {galleryImages.map((zone) => (
         <div key={zone.id} className={styles.zoneBlock}>

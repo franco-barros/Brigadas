@@ -22,6 +22,7 @@
 }
 
 /* Indicators */
+/* Indicators */
 .carouselIndicators {
   display: flex;
   justify-content: center;
@@ -29,17 +30,30 @@
   margin-top: 1.8rem;
 }
 
+/* DOT BASE */
 .carouselIndicator {
   width: 10px;
   height: 10px;
-  border-radius: 999px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.2);
-  transition: all 0.25s ease;
+
+  background-color: rgba(0, 159, 227, 0.25);
+
+  transition:
+    all 0.3s ease,
+    transform 0.2s ease;
 }
 
+/* HOVER */
+.carouselIndicator:hover {
+  background-color: rgba(0, 159, 227, 0.5);
+  transform: scale(1.1);
+}
+
+/* ACTIVE */
 .carouselIndicatorActive {
-  width: 26px;
-  background: #006d77;
+  width: 28px;
+  background: linear-gradient(90deg, #00bfff, #009fe3);
+  box-shadow: 0 4px 10px rgba(0, 159, 227, 0.35);
 }

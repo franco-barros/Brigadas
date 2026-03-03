@@ -21,19 +21,33 @@
 .carouselIndicators {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
 }
 
+/* DOT BASE */
 .carouselIndicator {
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 159, 227, 0.25);
+  border-radius: 50px;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+
+  transition:
+    all 0.3s ease,
+    transform 0.2s ease;
 }
 
+/* HOVER */
+.carouselIndicator:hover {
+  background-color: rgba(0, 159, 227, 0.5);
+  transform: scale(1.1);
+}
+
+/* ACTIVE (más elegante tipo pill) */
 .carouselIndicatorActive {
-  background-color: #2ec4b6;
+  width: 28px;
+  background: linear-gradient(90deg, #00bfff, #009fe3);
+  box-shadow: 0 4px 10px rgba(0, 159, 227, 0.35);
 }

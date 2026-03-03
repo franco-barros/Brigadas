@@ -10,7 +10,7 @@
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 109, 119, 0.35);
+  border-color: #009fe3;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
 }
 
@@ -50,5 +50,15 @@
   font-size: 0.8rem;
   font-weight: 600;
   background: rgba(0, 109, 119, 0.12);
-  color: #006d77;
+  color: #009fe3;
+}
+
+@media (max-width: 768px) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
 }

@@ -1,7 +1,7 @@
 .navbar {
-  --primary: #006d77;
-  --accent: #83c5be;
-  --text: #014d56;
+  --primary: #009fe3;
+  --primary-dark: #007bb3;
+  --text: #ffffff;
 
   position: fixed;
   top: 0;
@@ -10,41 +10,20 @@
   z-index: 9999;
   width: 100%;
 
-  /* ✅ ARRIBA: sólido */
-  background-color: var(--accent);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  /* 🔵 Fondo cian sólido */
+  background-color: var(--primary);
 
-  border-bottom: 1px solid rgba(0, 109, 119, 0.25);
-
-  transition:
-    background-color 0.35s ease,
-    backdrop-filter 0.35s ease,
-    box-shadow 0.35s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
   height: 64px;
   display: flex;
   align-items: center;
 
   font-family: var(--font-rethink-sans);
-}
 
-/* ================================
-   SCROLLED (SIN CAMBIAR ALTURA)
-================================ */
-.scrolled {
-  /* ✅ Totalmente transparente */
-  background-color: rgba(255, 255, 255, 0.05);
-
-  /* ✅ Glass real */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  /* ✅ Borde sutil tipo vidrio */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
-  /* ✅ Sombra suave flotante */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* ================================

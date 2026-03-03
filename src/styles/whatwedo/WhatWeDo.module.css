@@ -1,9 +1,10 @@
 .section {
   padding: 4rem 1.5rem;
-  background-color: #f7fcfc;
+  background-color: #ffffff; /* azul muy suave */
   text-align: center;
 }
 
+/* BADGE */
 .badgeWrapper {
   display: flex;
   justify-content: center;
@@ -20,26 +21,25 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: #444;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 159, 227, 0.25);
+  transition: all 0.3s ease;
   cursor: default;
 }
 
-.badge:hover {
-  background: linear-gradient(135deg, #fcd34d, #fde68a);
-}
-
+/* TITULO */
 .mainTitle {
   font-size: 2.4rem;
   font-family: var(--font-title);
-  color: #003d42;
+  color: #009fe3;
   margin-bottom: 1rem;
 }
 
+/* palabra destacada */
 .mainTitle span {
-  color: #2ec4b6;
+  color: #009fe3;
 }
 
+/* TEXTO INTRO */
 .intro {
   font-size: 1.1rem;
   color: #444;
@@ -48,6 +48,7 @@
   line-height: 1.6;
 }
 
+/* CARDS */
 .cardsWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -55,7 +56,7 @@
   justify-content: center;
 }
 
-/* Mostrar solo en desktop (ancho >= 768px) */
+/* Desktop */
 .desktopOnly {
   display: none;
 }
@@ -66,7 +67,7 @@
   }
 }
 
-/* Mostrar solo en mobile (ancho < 768px) */
+/* Mobile */
 .mobileOnly {
   display: block;
 }
