@@ -1,8 +1,8 @@
 .carouselContainer {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center; /* 👈 centra horizontal */
+  align-items: center;
+  width: 100%;
 }
 
 .carouselTrack {
@@ -14,9 +14,10 @@
 }
 
 .carouselSlide {
-  scroll-snap-align: start;
-  flex: 0 0 80%;
-  max-width: 300px;
+  width: 100%;
+  max-width: 320px; /* ancho real de la card */
+  display: flex;
+  justify-content: center;
 }
 .carouselIndicators {
   display: flex;
