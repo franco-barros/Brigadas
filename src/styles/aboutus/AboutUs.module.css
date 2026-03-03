@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  scroll-margin-top: 25px;
 }
 
 /* BADGE */

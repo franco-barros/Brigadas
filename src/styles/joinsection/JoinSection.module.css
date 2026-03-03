@@ -2,6 +2,7 @@
   padding: 4rem 1.5rem;
   background-color: #f8f9fa;
   text-align: center;
+  scroll-margin-top: 25px;
 }
 
 .badge {
