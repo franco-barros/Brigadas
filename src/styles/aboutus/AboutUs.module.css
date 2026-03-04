@@ -99,12 +99,19 @@
 }
 
 .dot {
+  all: unset; /* 👈 resetea estilos nativos del button */
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #cbd5e1;
   cursor: pointer;
   transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.dot:focus-visible {
+  outline: 2px solid #009fe3;
+  outline-offset: 3px;
 }
 
 .activeDot {

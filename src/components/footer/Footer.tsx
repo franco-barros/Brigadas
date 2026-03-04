@@ -14,7 +14,7 @@ const Footer = () => {
 
   const handleInternalLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    id: string
+    id: string,
   ) => {
     e.preventDefault();
     const section = document.getElementById(id);
@@ -37,9 +37,9 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Enlaces y contacto */}
         {isHome && (
           <>
+            {/* Enlaces */}
             <div className={styles.section}>
               <h4 className={styles.subtitle}>Enlaces</h4>
               <ul className={styles.list}>
@@ -48,28 +48,37 @@ const Footer = () => {
                     href="#aboutus"
                     onClick={(e) => handleInternalLinkClick(e, "aboutus")}
                   >
-                    Quiénes Somos
+                    Quiénes somos
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#work"
-                    onClick={(e) => handleInternalLinkClick(e, "work")}
+                    href="#whatwedo"
+                    onClick={(e) => handleInternalLinkClick(e, "whatwedo")}
                   >
-                    Nuestro Trabajo
+                    Qué hacemos
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#faq"
-                    onClick={(e) => handleInternalLinkClick(e, "faq")}
+                    href="#participate"
+                    onClick={(e) => handleInternalLinkClick(e, "participate")}
                   >
-                    Preguntas Frecuentes
+                    Cómo participar
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    onClick={(e) => handleInternalLinkClick(e, "contact")}
+                  >
+                    Contacto
                   </a>
                 </li>
               </ul>
             </div>
 
+            {/* Contacto */}
             <div className={styles.section}>
               <h4 className={styles.subtitle}>Contacto</h4>
               <p className={styles.contact}>

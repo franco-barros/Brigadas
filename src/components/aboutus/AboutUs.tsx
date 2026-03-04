@@ -8,10 +8,13 @@ import ImageCarousel from "./imagecarousel";
 
 const AboutUs: React.FC = () => {
   const images = [
-    "/images/Familia.png",
-    "/images/Familia7.png",
-    "/images/Familia6.png",
-    "/images/Familia2.png",
+    "/images/About/Image.png",
+    "/images/About/Image6.png",
+    "/images/About/Image5.png",
+    "/images/About/Image4.png",
+    "/images/About/Image3.png",
+    "/images/About/Image1.png",
+    "/images/About/Image2.png",
   ];
 
   const [index, setIndex] = useState(0);
@@ -22,7 +25,7 @@ const AboutUs: React.FC = () => {
         {/* Badge */}
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
-            <Users size={16} />
+            <Users size={16} aria-hidden="true" />
             Brigada Educativa
           </span>
         </div>
@@ -44,19 +47,24 @@ const AboutUs: React.FC = () => {
 
             <ul className={styles.valuesList}>
               <li>
-                <BookOpen size={20} /> Compromiso y trabajo en equipo
+                <BookOpen size={20} aria-hidden="true" />
+                Compromiso y trabajo en equipo
               </li>
               <li>
-                <Users size={20} /> Acceso Igualitario a la Educación
+                <Users size={20} aria-hidden="true" />
+                Acceso Igualitario a la Educación
               </li>
               <li>
-                <Globe size={20} /> Solidaridad con la comunidad
+                <Globe size={20} aria-hidden="true" />
+                Solidaridad con la comunidad
               </li>
               <li>
-                <Award size={20} /> Organización juvenil
+                <Award size={20} aria-hidden="true" />
+                Organización juvenil
               </li>
               <li>
-                <Zap size={20} /> Presencia en Barrios Populares
+                <Zap size={20} aria-hidden="true" />
+                Presencia en Barrios Populares
               </li>
             </ul>
 
@@ -71,10 +79,19 @@ const AboutUs: React.FC = () => {
           <div className={styles.imageWrapper}>
             <ImageCarousel images={images} index={index} setIndex={setIndex} />
 
-            <div className={styles.carouselDots}>
+            <div
+              className={styles.carouselDots}
+              role="tablist"
+              aria-label="Selector de imágenes"
+            >
               {images.map((_, i) => (
-                <span
+                <button
                   key={i}
+                  type="button"
+                  role="tab"
+                  aria-selected={i === index}
+                  aria-current={i === index ? "true" : undefined}
+                  aria-label={`Ir a la imagen ${i + 1}`}
                   className={`${styles.dot} ${
                     i === index ? styles.activeDot : ""
                   }`}

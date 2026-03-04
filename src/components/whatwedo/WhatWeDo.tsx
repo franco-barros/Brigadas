@@ -60,7 +60,7 @@ const WhatWeDo: React.FC = () => {
 
         {/* Title */}
         <h2 className={styles.mainTitle}>
-          <span>Que Hacemos</span>
+          <span>Qué Hacemos</span>
         </h2>
 
         {/* Intro */}

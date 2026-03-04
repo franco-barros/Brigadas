@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
         {/* Icono inferior derecho */}
         <div className={styles.iconBottomRight}>
           <Image
-            src="/icons/LibroIcono.png" // 👈 cambiá por tu segundo icono
+            src="/icons/LibroIcono.png"
             alt=""
             width={150}
             height={150}

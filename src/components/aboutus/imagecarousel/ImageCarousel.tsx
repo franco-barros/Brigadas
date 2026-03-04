@@ -15,7 +15,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
   index,
   setIndex,
-  interval = 3000,
+  interval = 4000,
 }) => {
   /* ✅ Autoplay */
   useEffect(() => {

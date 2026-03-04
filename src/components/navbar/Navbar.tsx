@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
           aria-label="Ir al inicio"
         >
           <Image
-            src="/logos/BrigadasCelesteNegro.png"
+            src="/logos/BrigadasBlanco.png"
             alt="Brigada Educativa"
             width={140}
             height={40}
