@@ -82,7 +82,7 @@ const Footer = () => {
             <div className={styles.section}>
               <h4 className={styles.subtitle}>Contacto</h4>
               <p className={styles.contact}>
-                <FaPhoneAlt /> +54 9 264 123-4567
+                <FaPhoneAlt /> +54 9 264 585-6333
               </p>
               <p className={styles.contact}>
                 <FaEnvelope /> brigadaeducativa@gmail.com

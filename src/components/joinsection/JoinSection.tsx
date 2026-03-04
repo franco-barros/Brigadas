@@ -6,7 +6,7 @@ import { MessageCircle, CheckCircle, Users } from "lucide-react";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 
 const JoinSection: React.FC = () => {
-  const whatsappNumber = "5491123456789";
+  const whatsappNumber = "542645856333";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (

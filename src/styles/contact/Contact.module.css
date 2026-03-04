@@ -103,9 +103,11 @@
   outline: none;
   border-color: #009fe3;
   box-shadow: 0 0 0 2px rgba(0, 159, 227, 0.15);
-  background-color: #ffffff;
 }
 
+/* ================================
+   BOTÓN SUBMIT (UNIFICADO)
+================================ */
 .submitButton {
   align-self: center;
   background: linear-gradient(135deg, #00bfff, #009fe3);
@@ -115,11 +117,71 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  transition: all 0.25s ease;
 }
 
-.submitButton:hover {
+.submitButton:hover:not(:disabled) {
   transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================================
+   SPINNER
+================================ */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================================
+   MENSAJES DE ESTADO
+================================ */
+.successMessage {
+  margin-top: 0.8rem;
+  color: #0f9d58;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.errorMessage {
+  margin-top: 0.8rem;
+  color: #d93025;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================================
@@ -141,7 +203,7 @@
   justify-content: center;
 }
 
-/* 🔵 Podcast ahora en cian */
+/* 🔵 Podcast en cian */
 .podcastCard {
   background: linear-gradient(135deg, #009fe3, #007bb3);
   color: white;
@@ -171,20 +233,16 @@
 .podcastCardButton,
 .instagramCardButton {
   margin-top: 1rem;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
   padding: 0.6rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-
   width: fit-content;
   align-self: center;
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -206,7 +264,7 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* ================================ 
+/* ================================
    CONTACTOS
 ================================ */
 .contactGrid {
@@ -263,6 +321,9 @@
   display: none;
 }
 
+/* ================================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
   .cardsRow {
     grid-template-columns: 1fr;

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/contact/Contact.module.css";
 import {
   Phone,
@@ -14,8 +14,62 @@ import { FaInstagram, FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import CarouselContact from "./carouselcontact/CarouselContact";
+import toast from "react-hot-toast";
 
 const Contact: React.FC = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      reason: formData.get("reason"),
+      message: formData.get("message"),
+    };
+
+    const toastId = toast.loading("Enviando mensaje...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        toast.error(result.error || "Error al enviar el mensaje", {
+          id: toastId,
+        });
+        setLoading(false);
+        return;
+      }
+
+      toast.success("Mensaje enviado correctamente 🚀", {
+        id: toastId,
+      });
+
+      form.reset();
+    } catch {
+      toast.error("Error de conexión", {
+        id: toastId,
+      });
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section className={styles.contact} id="contact">
       {/* TÍTULO */}
@@ -36,7 +90,7 @@ const Contact: React.FC = () => {
       {/* FORMULARIO */}
       <FadeInOnScroll delay={0.1}>
         <div className={styles.formWrapper}>
-          <form className={styles.contactForm}>
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
               <div className={styles.labelWithIcon}>
                 <User size={16} />
@@ -101,8 +155,19 @@ const Contact: React.FC = () => {
               />
             </div>
 
-            <button type="submit" className={styles.submitButton}>
-              Enviar mensaje
+            <button
+              type="submit"
+              className={`${styles.submitButton} ${loading ? styles.loading : ""}`}
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <span className={styles.spinner}></span>
+                  Enviando...
+                </>
+              ) : (
+                "Enviar mensaje"
+              )}
             </button>
           </form>
         </div>
@@ -136,7 +201,6 @@ const Contact: React.FC = () => {
       {/* PODCAST + INSTAGRAM */}
       <FadeInOnScroll delay={0.4}>
         <div className={styles.cardsRow}>
-          {/* INSTAGRAM */}
           <div className={styles.instagramCard}>
             <FaInstagram className={styles.instagramCardIcon} size={100} />
             <p className={styles.instagramCardText}>
@@ -154,14 +218,13 @@ const Contact: React.FC = () => {
             </Link>
           </div>
 
-          {/* PODCAST */}
           <div className={styles.podcastCard}>
             <Mic className={styles.podcastCardIcon} size={100} />
             <p>
               Escuchá nuestro podcast y conocé las voces de los protagonistas.
             </p>
             <Link
-              href="https://open.spotify.com/show/tu-podcast-link"
+              href="https://on.soundcloud.com/2njdgFP11NjDBitAp5"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.podcastCardButton}
